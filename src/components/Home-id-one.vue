@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="home-id-one">
     <div class="bg"></div>
-    <h1>Identitet</h1>
-    <div v-html="this.controller.importedContent" />
+    <h1>{{ this.vuexHomeTitle }}</h1>
+    <div v-html="this.vuexHomeContent" />
   </div>
 </template>
 
@@ -10,20 +10,18 @@
 export default {
   data () {
     return {
-      controller: {
-        importedContent: this.$store.state.content
-      }
+      vuexHomeTitle: this.$store.state.data[0].home.title,
+      vuexHomeContent: this.$store.state.data[0].home.content
     }
-  },
-  created () {
-    // console.log(this.$store.state.content)
   }
 }
 </script>
 
 <style lang="scss" scoped>
+  @import '../assets/scss/main.scss';
+
   .home-id-one {
-    font-family: helvetica, arial, sans-serif;
+    font-family: $primary-font;
     color: #303030;
 
     .bg {

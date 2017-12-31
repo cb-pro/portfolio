@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="nav">
-    <NavWindow class="NavWindow" :class="{showNavWindow: showNavWindow}" />
-    <div class="nav-btn" @click="showNavWindow = !showNavWindow"></div>
+    <NavWindow class="NavWindow" :class="{showNavWindow: showNav}" />
+    <div class="nav-btn" @click="toggleNavBtn"></div>
   </div>
 </template>
 
@@ -12,13 +12,20 @@ export default {
   components: {
     'NavWindow': NavWindow
   },
+  computed: {
+    showNav () {
+      return this.$store.getters.showNav
+    }
+  },
   data () {
     return {
-      showNavWindow: false
+      //
     }
   },
   methods: {
-
+    toggleNavBtn () {
+      this.$store.dispatch('toggleNav')
+    }
   }
 }
 </script>
@@ -29,12 +36,12 @@ export default {
 
     .NavWindow {
       opacity: 0;
-      transition: 800ms ease-in-out;
+      transition: 500ms ease-in-out;
       z-index: -1;
     }
     .showNavWindow {
-      opacity: .8;
-      transition: 800ms ease-in-out;
+      opacity: .9;
+      transition: 500ms ease-in-out;
       z-index: 8;
     }
     .nav-btn {

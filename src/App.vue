@@ -6,11 +6,20 @@
 </template>
 
 <script>
+import dataJSON from './data/data.json'
 import Nav from './components/Nav.vue'
 
 export default {
   components: {
     'Nav': Nav
+  },
+  created () {
+    this.importData()
+  },
+  methods: {
+    importData: function () {
+      this.$store.state.data = dataJSON
+    }
   }
 }
 </script>
