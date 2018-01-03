@@ -4,6 +4,8 @@ import Home from '@/views/Home.vue'
 import About from '@/views/About.vue'
 import Portfolio from '@/views/Portfolio.vue'
 
+import Test from '@/views/Test.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -23,6 +25,11 @@ export default new Router({
       path: '/portfolio',
       name: 'Portfolio',
       component: Portfolio
+    },
+    {
+      path: '/test',
+      name: 'Test',
+      component: Test
     }
   ]
 })

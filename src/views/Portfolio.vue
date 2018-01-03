@@ -8,14 +8,16 @@
         :style="{ transform: projectList.style }"
       >
         <h2>{{ project.title }}</h2>
-        <p v-html="project.content"></p>
+        <h4 v-html="project.subtitle"></h4>
+        <p v-html="project.text"></p>
+        <hr />
+        <img :src="'./static/gfx/' + logo" v-for="logo in project.logos" class="project-logos" />
       </div>
     </div>
 
     <div class="portfolio-buttons">
-      <button @click="previousProject">Previous</button>
-      <button @click="nextProject">Next</button>
-      <button>Hide Text</button>
+      <button @click="previousProject" :class="{ portfolioButtonDisabled: portfolioButton.previousIsDisabled }">Previous</button>
+      <button @click="nextProject" :class="{ portfolioButtonDisabled: portfolioButton.nextIsDisabled }">Next</button>
     </div>
 
   </div>
@@ -25,6 +27,10 @@
 export default {
   data () {
     return {
+      portfolioButton: {
+        previousIsDisabled: true,
+        nextIsDisabled: false
+      },
       projectsContainer: {
         style: ''
       },
@@ -36,19 +42,27 @@ export default {
       projects: [
         {
           title: 'Ullernklinikken',
-          content: 'Webapplikasjon for Ullernklinikken.no <br />Frilans oppdrag.'
+          subtitle: 'Webapplikasjon for Ullernklinikken.no <br />Frilans oppdrag.',
+          text: 'Ullernklinikken er en liten klinikk som ligger i Ullern Allé i Oslo. Klinikken består av manuellterapauter som er eksperter på behandling av muskel- og skjelettsykdommer. Fra idrettsutøvere til vanlige folk, alle er velkommne.',
+          logos: ['logo.png', 'logo.png']
         },
         {
           title: 'mInvoice®',
-          content: 'App design for minvoice® <br />Samarbeid med Sigurd Finseth / IUX'
+          subtitle: 'App design for minvoice® <br />Samarbeid med Sigurd Finseth / IUX',
+          text: 'mInvoice er neste generasjons serviceplattform. Som forbruker får du total kontroll over alle dine tjenesteleverandører. Motta og betal alle dine fakturaer både i app og på web.',
+          logos: ['logo.png', 'logo.png']
         },
         {
           title: 'Fra Ungdommen',
-          content: 'Ebok for Cappelen Damm. <br/>Vinner av Årets vakreste Ebok 2015.'
+          subtitle: 'Ebok for Cappelen Damm. <br/>Vinner av Årets vakreste Ebok 2015.',
+          text: 'Dette er den digitale utgaven av boka Fra Ungdommen. Boken er bygd opp med enkel navigering og man kan velge om man vil lese i kronologisk rekkefølge eller hoppe fra kapittel til kapittel. I den digitale utgaven er det også video som er knyttet til hver ungdomsprofil.',
+          logos: ['logo.png', 'logo.png']
         },
         {
           title: 'Busemannen',
-          content: 'Bokomslag for Cappelen Damm. <br />Samarbeid med Bente C. Bergan.'
+          subtitle: 'Bokomslag for Cappelen Damm. <br />Samarbeid med Bente C. Bergan.',
+          text: 'Knut Nærum og fire av forfatterne bak Nytt på nytt har rottet seg sammen om en saftig parodi på Jo Nesbøs Harry Hole-bøker. Helten er mer sliten, Oslo er råtnere og volden er nesten like drøy.',
+          logos: ['logo.png', 'logo.png']
         }
       ]
     }
@@ -66,7 +80,13 @@ export default {
         this.projectList.value += 100
         this.projectList.style = 'translateX(' + this.projectList.value + '%)'
         this.projectList.index--
-        console.log(this.projectList.index)
+        // console.log(this.projectList.index)
+        if (this.projectList.index === 1) {
+          this.portfolioButton.previousIsDisabled = true
+        }
+        if (this.projectList.index < this.projects.length) {
+          this.portfolioButton.nextIsDisabled = false
+        }
       }
     },
     nextProject () {
@@ -74,7 +94,13 @@ export default {
         this.projectList.value -= 100
         this.projectList.style = 'translateX(' + this.projectList.value + '%)'
         this.projectList.index++
-        console.log(this.projectList.index)
+        // console.log(this.projectList.index)
+        if (this.projectList.index > 1) {
+          this.portfolioButton.previousIsDisabled = false
+        }
+        if (this.projectList.index === this.projects.length) {
+          this.portfolioButton.nextIsDisabled = true
+        }
       }
     }
   }
@@ -98,58 +124,21 @@ export default {
         border: 1px dashed red;
         transition: 500ms ease-in-out;
         width: 100%;
+
+        .project-logos {
+          height: 50px;
+          margin-right: 10px;
+        }
       }
     }
 
     .portfolio-buttons {
       position: absolute;
       bottom: 40px;
+
+      .portfolioButtonDisabled {
+        opacity: 0.3;
+      }
     }
   }
 </style>
-
-
-
-
-
-
-
-
-
-
-<!-- <template lang="html">
-  <div class="portfolio">
-
-    <div class="portfolio-pro">
-      <PortfolioProUllernklinikken />
-      <PortfolioProMinvoice />
-      <PortfolioProFraUngdommen />
-    </div>
-
-  </div>
-</template>
-
-<script>
-import PortfolioProUllernklinikken from '../components/Portfolio-pro-ullernklinikken.vue'
-import PortfolioProMinvoice from '../components/portfolio-pro-minvoice.vue'
-import PortfolioProFraUngdommen from '../components/portfolio-pro-fra_ungdommen.vue'
-
-export default {
-  components: {
-    'PortfolioProUllernklinikken': PortfolioProUllernklinikken,
-    'PortfolioProMinvoice': PortfolioProMinvoice,
-    'PortfolioProFraUngdommen': PortfolioProFraUngdommen
-  }
-}
-</script>
-
-<style lang="scss" scoped>
-  @import '../assets/scss/main.scss';
-
-  .portfolio {
-    border: 1px dashed red;
-    display: flex;
-    font-family: $primary-font;
-    width: 300%
-  }
-</style> -->
