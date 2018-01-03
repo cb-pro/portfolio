@@ -35,22 +35,25 @@ export default {
   .nav {
 
     .NavWindow {
+      visibility: hidden;
       opacity: 0;
       transition: 500ms ease-in-out;
       z-index: -1;
     }
     .showNavWindow {
+      visibility: visible;
       opacity: .9;
       transition: 500ms ease-in-out;
       z-index: 8;
     }
     .nav-btn {
-      background: #505050;
-      bottom: 40px;
-      height: 40px;
-      position: absolute;
-      right: 40px;
-      width: 40px;
+      background: grey;
+      border-radius: 50%;
+      bottom: 30px;
+      height: 45px;
+      position: fixed;
+      right: 30px;
+      width: 45px;
       z-index: 9;
     }
   }

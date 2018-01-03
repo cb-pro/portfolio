@@ -1,7 +1,305 @@
 <template lang="html">
   <div class="portfolio">
-    <!-- <h1>PORTFOLIO</h1> -->
 
+    <transition name="portfolio-fade">
+    <compUllernklinikken class="pro ullernklinikken" v-if="index === 1" />
+    </transition>
+    <transition name="portfolio-fade">
+    <compMinvoice class="pro minvoice" v-if="index === 2" />
+    </transition>
+    <transition name="portfolio-fade">
+    <compFraUngdommen class="pro fra-ungdommen" v-if="index === 3" />
+    </transition>
+    <transition name="portfolio-fade">
+    <compBusemannen class="pro busemannen" v-if="index === 4" />
+    </transition>
+
+    <nav class="nav-buttons">
+      <div class="prev-btn" @click="prevProject"></div>
+      <div class="next-btn" @click="nextProject"></div>
+      <div class="hide-text"></div>
+    </nav>
+
+  </div>
+</template>
+
+<script>
+import Ullernklinikken from '../components/Portfolio-ullernklinikken.vue'
+import Minvoice from '../components/Portfolio-minvoice.vue'
+import FraUngdommen from '../components/Portfolio-fra_ungdommen.vue'
+import Busemannen from '../components/Portfolio-busemannen.vue'
+
+export default {
+  components: {
+    'compUllernklinikken': Ullernklinikken,
+    'compMinvoice': Minvoice,
+    'compFraUngdommen': FraUngdommen,
+    'compBusemannen': Busemannen
+  },
+  data () {
+    return {
+      index: 1
+    }
+  },
+  methods: {
+    prevProject () {
+      this.index -= 1
+    },
+    nextProject () {
+      this.index += 1
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+  .portfolio-fade-enter-active {
+    transition: all .5s ease-in-out;
+    transition-delay: 1s;
+
+  }
+  .portfolio-fade-leave-active {
+    // transition-delay: .5s;
+    transition: all .5s ease-in-out;
+
+  }
+  .portfolio-fade-enter, .portfolio-fade-leave-to {
+    opacity: 0;
+    // visibility: hidden;
+    // transition-delay: 2.5s;
+  }
+
+  .portfolio{
+
+    .pro {
+      position: absolute;
+    }
+
+    .ullernklinikken {
+      width: 100%;
+    }
+
+    .minvoice {
+      width: 100%;
+    }
+
+    .fra-ungdommen {
+      width: 100%;
+    }
+
+    .busemannen {
+      width: 100%;
+    }
+
+
+    //NAV
+    .nav-buttons {
+      bottom: 30px;
+      padding-left: 30px;
+      position: fixed;
+      div {
+        background: grey;
+        border-radius: 50%;
+        bottom: 30px;
+        display: inline-block;
+        height: 45px;
+        margin-right: 10px;
+        width: 45px;
+      }
+    }
+
+  }
+</style>
+
+
+
+
+
+
+
+<!-- <template lang="html">
+  <div class="portfolio">
+
+    <compUllernklinikken class="pro ullernklinikken" :style="{ left: this.navData.value[0]+'%' }" />
+    <compMinvoice class="pro minvoice" :style="{ left: this.navData.value[1]+'%' }" />
+    <compFraUngdommen class="pro fra-ungdommen" :style="{ left: this.navData.value[2]+'%' }" />
+    <compBusemannen class="pro busemannen" :style="{ left: this.navData.value[3]+'%' }" />
+
+    <nav class="nav-buttons">
+      <div class="prev-btn" @click="prevProject"></div>
+      <div class="next-btn" @click="nextProject"></div>
+      <div class="hide-text"></div>
+    </nav>
+
+
+  </div>
+</template>
+
+<script>
+import Ullernklinikken from '../components/Portfolio-ullernklinikken.vue'
+import Minvoice from '../components/Portfolio-minvoice.vue'
+import FraUngdommen from '../components/Portfolio-fra_ungdommen.vue'
+import Busemannen from '../components/Portfolio-busemannen.vue'
+
+export default {
+  components: {
+    'compUllernklinikken': Ullernklinikken,
+    'compMinvoice': Minvoice,
+    'compFraUngdommen': FraUngdommen,
+    'compBusemannen': Busemannen
+  },
+  data () {
+    return {
+      navData: {
+        index: 1,
+        fixed: true,
+        value: [0, 100, 200, 300]
+      }
+    }
+  },
+  created () {
+    // console.log(this.navData.value)
+  },
+  methods: {
+    nextProject () {
+      if (this.navData.index < this.navData.value.length) {
+        this.navData.index += 1
+        this.navData.value = this.navData.value.map(number => number - 100)
+      }
+    },
+    prevProject () {
+      if (this.navData.index > 1) {
+        this.navData.index -= 1
+        this.navData.value = this.navData.value.map(number => number + 100)
+      }
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+  .portfolio{
+
+    .pro {
+      // bottom: 0;
+      // overflow-y: scroll;
+      // top: 0;
+      transition: 500ms ease-in-out;
+      // height: 1200px;
+    }
+
+    .ullernklinikken {
+      position: fixed;
+      width: 100%;
+    }
+
+    .minvoice {
+      position: absolute;
+      width: 100%;
+    }
+
+    .fra-ungdommen {
+      position: fixed;
+      width: 100%;
+    }
+
+    .busemannen {
+      position: fixed;
+      width: 100%;
+    }
+
+
+    //NAV
+    .nav-buttons {
+      bottom: 30px;
+      padding-left: 30px;
+      position: fixed;
+      div {
+        background: grey;
+        border-radius: 50%;
+        bottom: 30px;
+        display: inline-block;
+        height: 45px;
+        margin-right: 10px;
+        width: 45px;
+      }
+    }
+
+  }
+</style> -->
+
+
+
+
+
+
+
+<!-- <template lang="html">
+  <div class="container">
+    <div class="one box">ONE</div>
+    <div class="two box">TWO</div>
+    <div class="three box">THREE
+      <div class="threeover"></div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+}
+</script>
+
+<style lang="scss">
+  .container {
+    // overflow: hidden;
+  }
+
+  .box {
+    transition: 500ms ease-in-out;
+    // overflow: hidden;
+  }
+
+  .one {
+    // display: inline-block;
+    width: 105%;
+    height: 1200px;
+    position: fixed;
+    background: #000;
+    color: #fff;
+  }
+  .two {
+    // display: inline-block;
+    width: 100%;
+    left: 100%;
+    top: 0;
+    height: 1200px;
+    background: #ff0000;
+    color: #fff;
+    position: absolute;
+  }
+  .three {
+    // display: inline-block;
+    width: 100%;
+    left: 200%;
+    top: 0;
+    height: 1200px;
+    background: #00c2ff;
+    color: #fff;
+    position: fixed;
+
+    .threeover {
+      position: absolute;
+      background: #fffc00;
+      opacity: .3;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+    }
+  }
+</style> -->
+
+<!-- <template lang="html">
+  <div class="portfolio">
     <div class="portfolio-pro" :style="{ width: projectsContainer.style }">
       <div class="portfolio-pro-list"
         v-for="project in projects"
@@ -141,4 +439,4 @@ export default {
       }
     }
   }
-</style>
+</style> -->

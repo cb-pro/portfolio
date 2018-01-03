@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="app">
-    <!-- <Nav /> -->
+    <Nav />
     <router-view></router-view>
   </div>
 </template>
@@ -27,5 +27,6 @@ export default {
 <style lang="css">
   body {
     margin: 0;
+    overflow-x: hidden;
   }
 </style>

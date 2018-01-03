@@ -38,7 +38,7 @@ export default {
     bottom: 0;
     font-family: $primary-font;
     left: 0;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     z-index: 8;
