@@ -17,7 +17,7 @@
     <nav class="nav-buttons">
       <div class="prev-btn" @click="prevProject"></div>
       <div class="next-btn" @click="nextProject"></div>
-      <div class="hide-text"></div>
+      <div class="hide-text" @click="hideText"></div>
     </nav>
 
   </div>
@@ -41,18 +41,49 @@ export default {
       index: 1
     }
   },
+  mounted () {
+    // invokes activateListen in methods
+    this.activateListen()
+
+    // hiding text when scrolling
+    window.addEventListener('scroll', () => {
+      if (this.$store.state.listenToScroll) {
+        this.$store.state.listenToScroll = false
+        console.log('listenToScroll is disabled')
+        this.$store.state.hideText = true
+      }
+    })
+  },
   methods: {
+    // makes it possible to hideText with scrolling
+    // 1 second delay for smoother experience
+    activateListen () {
+      setTimeout(() => {
+        this.$store.state.listenToScroll = true
+        console.log('listenToScroll is active')
+      }, 1000)
+    },
+    // Previous Project Button
     prevProject () {
       this.index -= 1
+      this.$store.state.hideText = false
+      this.activateListen()
     },
+    // Next Project Button
     nextProject () {
       this.index += 1
+      this.$store.state.hideText = false
+      this.activateListen()
+    },
+    // Hide Text Button
+    hideText () {
+      this.$store.state.hideText = !this.$store.state.hideText
     }
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .portfolio-fade-enter-active {
     transition: all .5s ease-in-out;
     transition-delay: 1s;
@@ -94,13 +125,14 @@ export default {
 
     //NAV
     .nav-buttons {
+      // border: 1px dashed red;
       bottom: 30px;
+      line-height: 0;
       padding-left: 30px;
       position: fixed;
       div {
         background: grey;
         border-radius: 50%;
-        bottom: 30px;
         display: inline-block;
         height: 45px;
         margin-right: 10px;

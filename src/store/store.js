@@ -5,7 +5,9 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
   state: {
-    showNav: false
+    showNav: false,
+    hideText: false,
+    listenToScroll: false
   },
   getters: {
     showNav (state) {

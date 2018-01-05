@@ -1,4 +1,4 @@
-<template lang="html">
+<!-- <template lang="html">
   <div class="fra-ungdommen">
     <section class="text-container">
       <div class="text-flex">
@@ -78,4 +78,4 @@ export default {
     }
   }
 
-</style>
+</style> -->
