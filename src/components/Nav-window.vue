@@ -25,6 +25,7 @@ export default {
   methods: {
     toggleNavBtn () {
       this.$store.dispatch('toggleNav')
+      this.$store.state.hideText = false
     }
   }
 }

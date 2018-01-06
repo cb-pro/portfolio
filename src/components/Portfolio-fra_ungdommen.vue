@@ -17,6 +17,7 @@
       </div>
     </section>
     <section class="images">
+      <img src="../../static/img/portfolio/fra_ung_00-head.jpg" alt="">
       <iframe width="100%" src="https://www.youtube.com/embed/tCrSX4sGp4o?autoplay=0&autohide=2&border=0&wmode=opaque&enablejsapi=1&modestbranding=0&controls=2&showinfo=0&rel=0&amp;" frameborder="0" allowfullscreen></iframe>
       <img src="../../static/img/portfolio/fra_ung_01.jpg" alt="">
       <img src="../../static/img/portfolio/fra_ung_02.jpg" alt="">
@@ -103,9 +104,9 @@ export default {
       margin: 0px auto;
       padding: 0px;
       line-height: 0;
-      width: 90%;
+      width: 83%;
       iframe {
-        margin: 4rem 0 2rem 0;
+        margin: 2rem 0 2rem 0;
       }
       img {
         box-shadow: .6rem .9rem .9rem #d9d9d9;

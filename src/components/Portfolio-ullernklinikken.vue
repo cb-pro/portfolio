@@ -12,9 +12,12 @@
         </p>
         <hr />
         <img class="my-logos" src="../../static/gfx/logos/bogsti-logo-fill.svg" alt="">
+
+
       </div>
     </section>
     <section class="images">
+      <img src="../../static/img/portfolio/ullernklinikken-head.jpg" alt="">
       <img src="../../static/img/portfolio/ullernklinikken-home-Low.jpg" alt="">
       <img src="../../static/img/portfolio/ullernklinikken-order-ow.jpg" alt="">
       <img src="../../static/img/portfolio/ullernklinikken-info-low.jpg" alt="">
@@ -81,6 +84,7 @@ export default {
           height: 6rem;
           margin-top: .6rem;
           transform: translatex(.3rem);
+          // vertical-align: top;
         }
       }
     }
@@ -89,7 +93,7 @@ export default {
       line-height: 0;
       margin: 0px auto;
       padding: 0px;
-      width: 90%;
+      width: 83%;
       img {
         box-shadow: .6rem .9rem .9rem #d9d9d9;
         margin: 2rem 0;

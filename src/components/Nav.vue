@@ -1,7 +1,9 @@
 <template lang="html">
   <div class="nav">
     <NavWindow class="NavWindow" :class="{showNavWindow: showNav}" />
-    <div class="nav-btn" @click="toggleNavBtn"></div>
+    <div class="nav-btn" @click="toggleNavBtn">
+      <img class="nav-btn-menu-icon" src="../../static/gfx/ui/menu-icon.svg" alt="">
+    </div>
   </div>
 </template>
 
@@ -55,6 +57,13 @@ export default {
       right: 30px;
       width: 45px;
       z-index: 9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .nav-btn-menu-icon {
+        height: 2.5rem;
+      }
     }
   }
 

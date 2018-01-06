@@ -2,12 +2,12 @@
   {
     "home": {
       "title": "Identitet",
-      "content": "</p><strong>Visuell identitet kan gjenkjennes på under et sekund hvis det er godt utviklet.</strong></p><p>Det finnes mange måter å kommunisere på som kan gjenspeile din identitet og dine holdninger. Måten man snakker på, kroppsspråk, klær, frisyre, eiendeler og mye mer.</p><p>Disse verdiene kan også kommuniseres med visuelle elementer. Med bruken av former, farger og typografi kan man uttrykke seg, men det trengs et femte element for å bli husket.</p>"
+      "content": "<h4>En visuell identitet kan gjenkjennes på under et sekund hvis det er godt utviklet.</h4><p>Det finnes mange måter å kommunisere på. Gjennom tale, kroppsspråk, klær, frisyre og mye mer kan man gjenspeile sin identitet og sine holdninger.</p><p>Disse verdiene kan også brukes med visuelle elementer. Ved bruken av former, farger og typografi kan man kommunisere med mottaker og oppnå en kontakt, men det trengs et femte element for å bli husket.</p>"
     }
   },
   {
     "about": {
-      "content": "<p>Frontend-utvikler med bakgrunn fra grafisk design</p><p>Studerte grafisk design ved Høyskolen Kristiania og har en bachelorgrad i design og web-utvikling fra Deakin University i Australia. Har jobbet som designer i Cappelen Damm forlag og vunnet pris for beste eBok app på Årets vakreste Bøker.</p><p>Jobber nå som Freelance Frontend-utvikler & designer og holder til i Oslo. Har du en nettside du ønsker å realisere? Jeg kan designe og bygge den for deg.</p><p>Send meg en melding og jeg kommer straks tilbake til deg.</p><p>post@christofferbogsti.com</p>"
+      "content": "<h4>Jeg er en frontend-utvikler med bakgrunn fra grafisk design.</h4><p>Studerte grafisk design ved Høyskolen Kristiania og har en bachelorgrad i design og web-utvikling fra Deakin University i Australia. Har jobbet som designer i Cappelen Damm forlag og vunnet pris for beste eBok app på Årets vakreste Bøker.</p><p>Jobber nå som Freelance Frontend-utvikler og designer i Oslo. Har du en nettside du ønsker å realisere? Jeg kan designe og bygge den for deg.</p><p>Send meg en melding og jeg kommer straks tilbake til deg.</p><p>post@christofferbogsti.com</p>"
     }
   }
 ]

@@ -15,12 +15,10 @@
       </div>
     </section>
     <section class="images">
-      <img src="../../static/img/portfolio/ullernklinikken-home-Low.jpg" alt="">
-      <img src="../../static/img/portfolio/ullernklinikken-order-ow.jpg" alt="">
-      <img src="../../static/img/portfolio/ullernklinikken-info-low.jpg" alt="">
-      <img src="../../static/img/portfolio/ullernklinikken-employees-low.jpg" alt="">
-      <img src="../../static/img/portfolio/ullernklinikken-contact-low.jpg" alt="">
-      <img src="../../static/img/portfolio/ullernklinikken-ipad-low.jpg" alt="">
+      <img src="../../static/img/portfolio/minvoice-head-tall.jpg" alt="">
+      <img src="../../static/img/portfolio/minvoice_01.jpg" alt="">
+      <img src="../../static/img/portfolio/minvoice_02.jpg" alt="">
+      <img src="../../static/img/portfolio/minvoice_03.jpg" alt="">
     </section>
   </div>
 </template>
@@ -87,9 +85,9 @@ export default {
 
     .images {
       margin: 0px auto;
-      padding: 0px;
+      padding: 0;
       line-height: 0;
-      width: 90%;
+      width: 83%;
       img {
         box-shadow: .6rem .9rem .9rem #d9d9d9;
         margin: 2rem 0;

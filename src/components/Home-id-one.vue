@@ -1,8 +1,13 @@
 <template lang="html">
   <div class="home-id-one">
-    <div class="bg"></div>
-    <h1>{{ this.vuexHomeTitle }}</h1>
-    <div v-html="this.vuexHomeContent" />
+
+    <div class="background"></div>
+
+    <section class="home-id-one-text-container">
+      <h1>{{ this.vuexHomeTitle }}</h1>
+      <div v-html="this.vuexHomeContent" />
+    </section>
+
   </div>
 </template>
 
@@ -21,10 +26,8 @@ export default {
   @import '../assets/scss/main.scss';
 
   .home-id-one {
-    font-family: $primary-font;
-    color: #303030;
 
-    .bg {
+    .background {
       // background: red;
       bottom: 0;
       left: 0;
@@ -32,6 +35,18 @@ export default {
       right: 0;
       top: 0;
       z-index: -1
+    }
+
+    .home-id-one-text-container {
+      color: #303030;
+      font-family: $primary-font;
+      margin: 0 auto;
+      padding-top: 6%;
+      width: 83%;
+
+      div {
+        margin-top: -1rem;
+      }
     }
   }
 

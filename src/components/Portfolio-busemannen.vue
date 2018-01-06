@@ -87,7 +87,7 @@ export default {
       margin: 0px auto;
       padding: 0px;
       line-height: 0;
-      width: 90%;
+      width: 83%;
       img {
         box-shadow: .6rem .9rem .9rem #d9d9d9;
         margin: 2rem 0;
