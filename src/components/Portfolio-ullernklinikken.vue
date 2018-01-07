@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="ullernklinikken">
-    <section class="text-container" :class="{ hidden: this.$store.state.hideText }">
+    <section class="text-container" :class="{ hidden: this.$store.state.toggleText }">
       <div class="text-flex">
         <h1>Ullernklinikken</h1>
         <h4>

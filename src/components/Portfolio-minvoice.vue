@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="minvoice">
-    <section class="text-container" :class="{ hidden: this.$store.state.hideText }">
+    <section class="text-container" :class="{ hidden: this.$store.state.toggleText }">
       <div class="text-flex">
         <h1>mInvoice<sup style="font-size:1rem">®</sup></h1>
         <h4>
