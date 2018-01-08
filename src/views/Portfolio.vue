@@ -119,7 +119,7 @@ export default {
   // VUE TRANSITIONS
   .portfolio-fade-enter-active {
     transition: all .5s ease-in-out;
-    transition-delay: 1s;
+    transition-delay: .5s;
 
   }
   .portfolio-fade-leave-active {
