@@ -2,7 +2,7 @@
   <div class="nav-window">
 
     <div class="nav-links">
-      <router-link to="/"><h3 @click="toggleNavBtn">Hjem</h3></router-link>
+      <router-link to="/home"><h3 @click="toggleNavBtn">Hjem</h3></router-link>
       <router-link to="/about"><h3 @click="toggleNavBtn">Om meg</h3></router-link>
       <router-link to="/portfolio"><h3 @click="toggleNavBtn">Portfolio</h3></router-link>
     </div>

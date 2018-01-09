@@ -18,7 +18,11 @@
     </section>
     <section class="images">
       <img src="../../static/img/portfolio/fra_ung_00-head.jpg" alt="">
-      <iframe width="100%" src="https://www.youtube.com/embed/tCrSX4sGp4o?autoplay=0&autohide=2&border=0&wmode=opaque&enablejsapi=1&modestbranding=0&controls=2&showinfo=0&rel=0&amp;" frameborder="0" allowfullscreen></iframe>
+
+      <video width="100%" controls poster="../../static/video/fra-ungdommen-thumb.jpg">
+        <source src="../../static/video/fra-ungdommen-video.mp4" type="video/mp4" />
+      </video>
+      <!-- <iframe width="100%" src="https://www.youtube.com/embed/tCrSX4sGp4o?autoplay=0&autohide=2&border=0&wmode=opaque&enablejsapi=1&modestbranding=0&controls=2&showinfo=0&rel=0&amp;" frameborder="0" allowfullscreen></iframe> -->
       <img src="../../static/img/portfolio/fra_ung_01.jpg" alt="">
       <img src="../../static/img/portfolio/fra_ung_02.jpg" alt="">
       <img src="../../static/img/portfolio/fra_ung_03.jpg" alt="">
@@ -63,6 +67,7 @@ export default {
       top: -10rem;
       width: 100%;
       transition: .5s ease-in-out;
+      z-index: 5;
 
       .text-flex {
         // border: 1px dashed red;
@@ -105,8 +110,11 @@ export default {
       padding: 0px;
       line-height: 0;
       width: 83%;
-      iframe {
+      video {
         margin: 2rem 0 2rem 0;
+        // position: relative;
+        // z-index: -1;
+        // width: 100%;
       }
       img {
         box-shadow: .6rem .9rem .9rem #d9d9d9;

@@ -56,6 +56,7 @@ export default {
       top: -10rem;
       width: 100%;
       transition: .5s ease-in-out;
+      z-index: 5;
 
       .text-flex {
         // border: 1px dashed red;

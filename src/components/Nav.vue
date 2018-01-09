@@ -62,7 +62,7 @@ export default {
       align-items: center;
 
       .nav-btn-menu-icon {
-        height: 2.5rem;
+        height: 2rem;
       }
     }
   }

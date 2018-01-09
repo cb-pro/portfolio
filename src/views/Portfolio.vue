@@ -26,7 +26,7 @@
       <div class="next-btn" @click="nextProject" :class="{ styleNextDisabled: this.nextDisabled }">
         <img class="projects-btn-next" src="../../static/gfx/ui/next-project.svg" alt="" />
       </div>
-      <div class="text" @click="toggleText" :class="{ styleTextDisabled: this.textDisabled }">
+      <div class="text" @click="toggleText" :class="{ styleTextDisabled: this.$store.state.textDisabled }">
         <img class="projects-btn-text" src="../../static/gfx/ui/text.svg" alt="" />
       </div>
     </nav>
@@ -47,46 +47,67 @@ export default {
     'compFraUngdommen': FraUngdommen,
     'compBusemannen': Busemannen
   },
+  //
+  /* !!! DATA !!! */
   data () {
     return {
       index: 1,
       projects: 4,
       prevDisabled: true,
-      nextDisabled: false,
-      textDisabled: true
+      nextDisabled: false
+      // textDisabled: true
     }
   },
-  mounted () {
+  //
+  /* !!! CREATED !!! */
+  created () {
     // invokes activateListen in methods
     this.activateListen()
 
-    // hiding text when scrolling
-    window.addEventListener('scroll', () => {
-      if (this.$store.state.listenToScroll) {
-        this.$store.state.listenToScroll = false
-        console.log('listenToScroll is disabled')
-        this.$store.state.toggleText = true
-        this.textDisabled = false
-      }
-    })
+    this.$store.state.textDisabled = true
+    // console.log('textDisabled = ' + this.$store.state.textDisabled)
+
+    // this.$store.watch((state) => {
+    //   console.log('textDisabled = ' + this.$store.state.textDisabled) // could also put a Getter here
+    // })
+
+    window.addEventListener('scroll', this.handleScroll)
   },
+  //
+  /* !!! DESTROY !!! */
+  destroy () {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  //
+  /* !!! METHODS !!! */
   methods: {
     // makes it possible to toggleText with scrolling
     // 1 second delay for smoother experience
     activateListen () {
       setTimeout(() => {
         this.$store.state.listenToScroll = true
-        console.log('listenToScroll is active')
-      }, 1000)
+        // console.log('listenToScroll is active')
+      }, 1500)
+    },
+    handleScroll () {
+      if (this.$store.state.listenToScroll === true) {
+        this.$store.state.listenToScroll = false
+        // console.log('listenToScroll is disabled')
+        this.$store.state.toggleText = true
+        this.$store.state.textDisabled = false
+      }
     },
     // Previous Project Button
     prevProject () {
       if (this.index > 1) {
         this.index -= 1
         this.$store.state.toggleText = false
-        this.textDisabled = true
+        this.$store.state.textDisabled = true
         this.nextDisabled = false
         this.activateListen()
+        setTimeout(function () {
+          window.scrollTo(0, 0)
+        }, 500)
         if (this.index === 1) {
           this.prevDisabled = true
         }
@@ -97,9 +118,12 @@ export default {
       if (this.index < this.projects) {
         this.index += 1
         this.$store.state.toggleText = false
-        this.textDisabled = true
+        this.$store.state.textDisabled = true
         this.prevDisabled = false
         this.activateListen()
+        setTimeout(function () {
+          window.scrollTo(0, 0)
+        }, 500)
         if (this.index === this.projects) {
           this.nextDisabled = true
         }
@@ -108,8 +132,11 @@ export default {
     // Toggle Text Button
     toggleText () {
       this.$store.state.toggleText = !this.$store.state.toggleText
-      this.textDisabled = !this.textDisabled
+      this.$store.state.textDisabled = !this.$store.state.textDisabled
       this.activateListen()
+      setTimeout(function () {
+        window.scrollTo(0, 0)
+      }, 500)
     }
   }
 }
@@ -171,6 +198,7 @@ export default {
       line-height: 0;
       padding-left: 30px;
       position: fixed;
+      z-index: 8;
       div {
         align-items: center;
         background: grey;
