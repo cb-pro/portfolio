@@ -50,7 +50,7 @@
         </div>
 
         <!-- ANBEFALINGER -->
-        <div class="about-links-anbefalinger" v-if="activeLink === 3">
+        <section class="about-links-anbefalinger" v-if="activeLink === 3">
 
           <!-- Udemy -->
           <div>
@@ -79,7 +79,7 @@
           </div>
 
           <!-- Books -->
-          <h3 style="margin-top:7rem;">For å lære mer om design anbefaler jeg disse bøkene:</h3>
+          <h3 style="margin-top:7rem;">For å lære mer om design, anbefaler jeg disse bøkene:</h3>
           <div>
             <img class="udemy" src="../../static/img/anbefalinger/books/book-visuell-identitet.jpg" alt="">
             <h5>Visuell identitet</h5>
@@ -105,7 +105,7 @@
             <h5>Fargene forteller</h5>
             <h6>av Tove Steinbo</h6>
           </div>
-        </div>
+        </section>
       </div>
 
       </div>
@@ -192,6 +192,8 @@ export default {
           // ANBEFALINGER STYLES
           .about-links-anbefalinger {
             div {
+              margin-bottom: 5rem;
+              &:first-child {margin-bottom: 0;}
               img {
                 width: 100%;
               }
