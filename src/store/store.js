@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
   state: {
-    showNav: false,
+    showNav: true,
+    breadcrumbsMain: 'Hjem',
     toggleText: false,
     listenToScroll: false,
     textDisabled: true

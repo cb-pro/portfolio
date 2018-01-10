@@ -1,10 +1,10 @@
 <template lang="html">
   <div class="minvoice">
-    <section class="text-container" :class="{ hidden: this.$store.state.toggleText }">
-      <div class="text-flex">
+    <section class="text-flex" :class="{ hidden: this.$store.state.toggleText }">
+      <div class="text-container">
         <h1>mInvoice<sup style="font-size:1rem">®</sup></h1>
         <h4>
-          App design for minvoice<sup>®</sup> <br />
+          App design for minvoice<sup style="font-size:.5rem">®</sup> <br />
           Samarbeid med Sigurd Finseth / IUX
         </h4>
         <p>
@@ -40,23 +40,21 @@ export default {
       transition: .5s ease-in-out;
     }
 
-    .text-container {
+    .text-flex {
       background: hsla(0,0%,100%,1);
-      bottom: -10rem;
+      // border: 1px dashed red;
+      bottom: 0rem;
       display: flex;
-      // display: none;
-      flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       position: fixed;
-      top: -10rem;
+      top: 0rem;
       width: 100%;
       transition: .5s ease-in-out;
       z-index: 5;
 
-      .text-flex {
+      .text-container {
         // border: 1px dashed red;
-        padding: 0 3rem;
-        margin-top: 35%;
+        padding: 3rem;
 
         h1 {
           // border: 1px dashed red;
@@ -82,6 +80,15 @@ export default {
           transform: translatex(.3rem);
         }
       }
+    }
+
+    .extended-background {
+      background: hsla(0,0%,100%,1);
+      bottom: -20rem;
+      position: fixed;
+      top: -20rem;
+      transition: .5s ease-in-out;
+      width: 100%;
     }
 
     .images {

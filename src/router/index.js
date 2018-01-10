@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Intro from '@/views/Intro.vue'
-import Home from '@/views/Home.vue'
-import About from '@/views/About.vue'
+import Hjem from '@/views/Home.vue'
+import OmMeg from '@/views/About.vue'
 import Portfolio from '@/views/Portfolio.vue'
 
 import Test from '@/views/Test.vue'
@@ -18,14 +18,14 @@ export default new Router({
       component: Intro
     },
     {
-      path: '/home',
-      name: 'Home',
-      component: Home
+      path: '/Hjem',
+      name: 'Hjem',
+      component: Hjem
     },
     {
-      path: '/about',
-      name: 'About',
-      component: About
+      path: '/om-meg',
+      name: 'Om meg',
+      component: OmMeg
     },
     {
       path: '/portfolio',

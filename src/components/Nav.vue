@@ -1,9 +1,16 @@
 <template lang="html">
   <div class="nav">
+
     <NavWindow class="NavWindow" :class="{showNavWindow: showNav}" />
-    <div class="nav-btn" @click="toggleNavBtn">
-      <img class="nav-btn-menu-icon" src="../../static/gfx/ui/menu-icon.svg" alt="">
-    </div>
+
+    <section class="nav-btn-flex">
+      <div class="nav-btn-container">
+        <div class="nav-btn" @click="toggleNavBtn">
+          <img class="nav-btn-menu-icon" src="../../static/gfx/ui/menu-icon.svg" alt="">
+        </div>
+      </div>
+    </section>
+
   </div>
 </template>
 
@@ -35,34 +42,37 @@ export default {
 <style lang="scss">
 
   .nav {
-
     .NavWindow {
       visibility: hidden;
       opacity: 0;
-      transition: 500ms ease-in-out;
+      transition: .4s ease-in-out;
       z-index: -1;
     }
     .showNavWindow {
       visibility: visible;
-      opacity: .9;
-      transition: 500ms ease-in-out;
+      opacity: 1;
+      transition: .5s ease-in-out;
       z-index: 8;
     }
-    .nav-btn {
-      background: grey;
-      border-radius: 50%;
-      bottom: 30px;
-      height: 45px;
-      position: fixed;
-      right: 30px;
-      width: 45px;
-      z-index: 9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
 
-      .nav-btn-menu-icon {
-        height: 2rem;
+    .nav-btn-flex {
+      bottom: 3rem;
+      position: fixed;
+      right: 3rem;
+      z-index: 9;
+      .nav-btn-container {
+        .nav-btn {
+          background: grey;
+          border-radius: 50%;
+          height: 45px;
+          width: 45px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .nav-btn-menu-icon {
+            height: 2rem;
+          }
+        }
       }
     }
   }

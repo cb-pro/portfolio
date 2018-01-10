@@ -19,17 +19,19 @@
     <!-- <img class="scroll-down" src="../../static/gfx/ui/scroll-down.svg" alt=""> -->
 
     <!-- PROJECT NAV BUTTONS  -->
-    <nav class="nav-buttons">
-      <div class="prev-btn" @click="prevProject" :class="{ stylePrevDisabled: this.prevDisabled }">
-        <img class="projects-btn-prev" src="../../static/gfx/ui/previous-project.svg" alt="" />
-      </div>
-      <div class="next-btn" @click="nextProject" :class="{ styleNextDisabled: this.nextDisabled }">
-        <img class="projects-btn-next" src="../../static/gfx/ui/next-project.svg" alt="" />
-      </div>
-      <div class="text" @click="toggleText" :class="{ styleTextDisabled: this.$store.state.textDisabled }">
-        <img class="projects-btn-text" src="../../static/gfx/ui/text.svg" alt="" />
-      </div>
-    </nav>
+    <section class="nav-buttons-flex">
+      <nav class="nav-buttons-container">
+        <div class="prev-btn" @click="prevProject" :class="{ stylePrevDisabled: this.prevDisabled }">
+          <img class="projects-btn-prev" src="../../static/gfx/ui/previous-project.svg" alt="" />
+        </div>
+        <div class="next-btn" @click="nextProject" :class="{ styleNextDisabled: this.nextDisabled }">
+          <img class="projects-btn-next" src="../../static/gfx/ui/next-project.svg" alt="" />
+        </div>
+        <div class="text" @click="toggleText" :class="{ styleTextDisabled: this.$store.state.textDisabled }">
+          <img class="projects-btn-text" src="../../static/gfx/ui/text.svg" alt="" />
+        </div>
+      </nav>
+    </section>
 
   </div>
 </template>
@@ -190,51 +192,54 @@ export default {
     // }
 
     // NAV PROJECTS BUTTONS
-    .nav-buttons {
-      // border: 1px dashed red;
-      bottom: 30px;
-      display: flex;
-      flex-direction: row;
-      line-height: 0;
-      padding-left: 30px;
+    .nav-buttons-flex {
+      bottom: 3rem;
       position: fixed;
-      z-index: 8;
-      div {
-        align-items: center;
-        background: grey;
-        border-radius: 50%;
+      z-index: 5;
+      .nav-buttons-container {
+        // border: 1px dashed red;
         display: flex;
-        justify-content: center;
-        height: 45px;
-        margin-right: 10px;
-        transition: 500ms ease-in-out;
-        width: 45px;
+        flex-direction: row;
+        line-height: 0;
+        margin-left: 3rem;
 
-        img {
-          height: 2.5rem;
+        div {
+          align-items: center;
+          background: grey;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          height: 45px;
+          margin-right: 10px;
+          transition: 500ms ease-in-out;
+          width: 45px;
+          &:last-child {margin-right: 0;}
+
+          img {
+            height: 2.5rem;
+          }
+        }
+        // SVG IMG'S
+        .projects-btn-prev {
+          transform: translateX(-.2rem);
+        }
+        .projects-btn-next {
+          transform: translateX(.2rem);
+        }
+        .projects-btn-text {
+          height: 1.5rem;
+        }
+        // BUTTON INTERACTIVE STYLES
+        .text {
+          transition: 500ms ease-in-out;
+        }
+        .stylePrevDisabled,
+        .styleNextDisabled,
+        .styleTextDisabled {
+          background: lightgrey;
+          transition: 500ms ease-in-out;
         }
       }
-      // SVG IMG'S
-      .projects-btn-prev {
-        transform: translateX(-.2rem);
-      }
-      .projects-btn-next {
-        transform: translateX(.2rem);
-      }
-      .projects-btn-text {
-        height: 1.5rem;
-      }
-      // BUTTON INTERACTIVE STYLES
-      .text {
-        transition: 500ms ease-in-out;
-      }
-      .stylePrevDisabled,
-      .styleNextDisabled,
-      .styleTextDisabled {
-        background: lightgrey;
-        transition: 500ms ease-in-out;
-      }
     }
-
   }
 </style>

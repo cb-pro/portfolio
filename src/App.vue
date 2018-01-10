@@ -25,7 +25,8 @@ export default {
 </script>
 
 <style lang="scss">
-  html {font-size: 62.5%;}
+  html {font-size: 62.5%;
+    @media (min-width: 900px) {font-size: 100%;}}
   h1 {font-size: 3.3rem;}  // TITLE
   h2 {font-size: 2.9rem;}  // ALT TITLE
   h3 {font-size: 2.1rem;}
@@ -33,6 +34,8 @@ export default {
   h5 {font-size: 1.9rem;}
   h6 {font-size: 1.6rem;}
   p {font-size: 1.6rem;}   // BODY TEXT
+
+  h1,h2,h3,h4,h5,h6,p {margin-top: 0rem;}
 
   body {
     margin: 0;

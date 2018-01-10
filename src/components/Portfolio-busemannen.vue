@@ -1,7 +1,8 @@
 <template lang="html">
   <div class="busemannen">
-    <section class="text-container" :class="{ hidden: this.$store.state.toggleText }">
-      <div class="text-flex">
+    <section class="text-flex" :class="{ hidden: this.$store.state.toggleText }">
+      <div class="text-container">
+
         <h1>Busemannen</h1>
         <h4>
           Bokomslag for Cappelen Damm. <br />
@@ -14,6 +15,9 @@
         <img class="my-logos" src="../../static/gfx/logos/cada-logo.svg" alt="">
       </div>
     </section>
+
+    <div class="extended-background" :class="{ hidden: this.$store.state.toggleText }"></div>
+
     <section class="images">
       <img src="../../static/img/portfolio/busemannen-illustrasjon-retouch.jpg" alt="">
       <img src="../../static/img/portfolio/busemannen-ylvis_01.jpg" alt="">
@@ -41,23 +45,21 @@ export default {
       transition: .5s ease-in-out;
     }
 
-    .text-container {
-      background: hsla(0,0%,0%,1);
-      bottom: -10rem;
+    .text-flex {
+      // background: hsla(0,0%,0%,1);
+      // border: 1px dashed red;
+      bottom: 0rem;
       display: flex;
-      // display: none;
-      flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       position: fixed;
-      top: -10rem;
+      top: 0rem;
       width: 100%;
       transition: .5s ease-in-out;
       z-index: 5;
 
-      .text-flex {
+      .text-container {
         // border: 1px dashed red;
-        padding: 0 3rem;
-        margin-top: 35%;
+        padding: 3rem;
 
         h1 {
           // border: 1px dashed red;
@@ -82,6 +84,15 @@ export default {
           transform: translatex(.3rem);
         }
       }
+    }
+
+    .extended-background {
+      background: hsla(0,0%,0%,1);
+      bottom: -20rem;
+      position: fixed;
+      top: -20rem;
+      transition: .5s ease-in-out;
+      width: 100%;
     }
 
     .images {

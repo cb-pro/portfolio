@@ -1,21 +1,22 @@
 <template lang="html">
   <div class="ullernklinikken">
-    <section class="text-container" :class="{ hidden: this.$store.state.toggleText }">
-      <div class="text-flex">
+    <section class="text-flex" :class="{ hidden: this.$store.state.toggleText }">
+      <div class="text-container">
         <h1>Ullernklinikken</h1>
         <h4>
           Webapplikasjon for Ullernklinikken.no <br />
-          Frilans oppdrag.
+          Frilans oppdrag
         </h4>
         <p>
           Ullernklinikken er en liten klinikk som ligger i Ullern Allé i Oslo. Klinikken består av manuellterapauter som er eksperter på behandling av muskel- og skjelettsykdommer. Fra idrettsutøvere til vanlige folk, alle er velkommne.
         </p>
         <hr />
         <img class="my-logos" src="../../static/gfx/logos/bogsti-logo-fill.svg" alt="">
-
-
       </div>
     </section>
+
+    <div class="extended-background" :class="{ hidden: this.$store.state.toggleText }"></div>
+
     <section class="images">
       <img src="../../static/img/portfolio/ullernklinikken-head.jpg" alt="">
       <img src="../../static/img/portfolio/ullernklinikken-home-Low.jpg" alt="">
@@ -45,23 +46,21 @@ export default {
       transition: .5s ease-in-out;
     }
 
-    .text-container {
-      background: hsla(0,0%,100%,1);
-      bottom: -10rem;
+    .text-flex {
+      // background: hsla(0,0%,100%,1);
+      // border: 1px dashed red;
+      bottom: 0rem;
       display: flex;
-      // display: none;
-      flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       position: fixed;
-      top: -10rem;
+      top: 0rem;
       width: 100%;
       transition: .5s ease-in-out;
       z-index: 5;
 
-      .text-flex {
+      .text-container {
         // border: 1px dashed red;
-        padding: 0 3rem;
-        margin-top: 35%;
+        padding: 3rem;
 
         h1 {
           // border: 1px dashed red;
@@ -88,6 +87,15 @@ export default {
           // vertical-align: top;
         }
       }
+    }
+
+    .extended-background {
+      background: hsla(0,0%,100%,1);
+      bottom: -20rem;
+      position: fixed;
+      top: -20rem;
+      transition: .5s ease-in-out;
+      width: 100%;
     }
 
     .images {

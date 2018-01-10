@@ -1,11 +1,11 @@
 <template lang="html">
   <div class="fra-ungdommen">
-    <section class="text-container" :class="{ hidden: this.$store.state.toggleText }">
-      <div class="text-flex">
+    <section class="text-flex" :class="{ hidden: this.$store.state.toggleText }">
+      <div class="text-container">
         <h1>Fra Ungdommen</h1>
         <h4>
-          Ebok for Cappelen Damm. <br/>
-          Vinner av Årets vakreste Ebok 2015.
+          Ebok for Cappelen Damm <br/>
+          Vinner av Årets vakreste Ebok 2015
         </h4>
         <p>
           Dette er den digitale utgaven av boka Fra Ungdommen. Boken er bygd opp med enkel navigering og man kan velge om man vil lese i kronologisk rekkefølge eller hoppe fra kapittel til kapittel. I den digitale utgaven er det også video som er knyttet til hver ungdomsprofil.
@@ -16,6 +16,9 @@
         <!-- <img class="my-logos" src="../../static/gfx/logos/aarets_boeker-logo.svg" alt=""> -->
       </div>
     </section>
+
+    <div class="extended-background" :class="{ hidden: this.$store.state.toggleText }"></div>
+
     <section class="images">
       <img src="../../static/img/portfolio/fra_ung_00-head.jpg" alt="">
 
@@ -56,23 +59,21 @@ export default {
       transition: .5s ease-in-out;
     }
 
-    .text-container {
+    .text-flex {
       background: hsla(0,0%,100%,1);
-      bottom: -10rem;
+      // border: 1px dashed red;
+      bottom: 0rem;
       display: flex;
-      // display: none;
-      flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       position: fixed;
-      top: -10rem;
+      top: 0rem;
       width: 100%;
       transition: .5s ease-in-out;
       z-index: 5;
 
-      .text-flex {
+      .text-container {
         // border: 1px dashed red;
-        padding: 0 3rem;
-        margin-top: 35%;
+        padding: 3rem;
 
         h1 {
           // border: 1px dashed red;
@@ -103,6 +104,15 @@ export default {
           height: 3.3rem;
         }
       }
+    }
+
+    .extended-background {
+      background: hsla(0,0%,100%,1);
+      bottom: -20rem;
+      position: fixed;
+      top: -20rem;
+      transition: .5s ease-in-out;
+      width: 100%;
     }
 
     .images {

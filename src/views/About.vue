@@ -1,14 +1,19 @@
 <template lang="html">
   <div class="about">
-    <section class="about-container">
+    <section class="about-flex">
+      <div class="about-container">
       <h1>Hei</h1>
-      <h3>Jeg er en designer med <br />lidenskap for koding.</h3>
+      <h3>Jeg er en designer med lidenskap for koding.</h3>
       <div class="about-links">
         <h6 @click="activeLink = 1" :class="{ activeLink: activeLink === 1 }">Om meg</h6>
         <h6 @click="activeLink = 2" :class="{ activeLink: activeLink === 2 }">Skills</h6>
         <h6 @click="activeLink = 3" :class="{ activeLink: activeLink === 3 }">Anbefalinger</h6>
       </div>
+
+      <!-- LINE -->
       <hr />
+
+
       <div class="about-links-content">
 
         <!-- OM MEG -->
@@ -48,9 +53,9 @@
         <div class="about-links-anbefalinger" v-if="activeLink === 3">
 
           <!-- Udemy -->
-          <div style="margin: 1.5rem 0rem 2rem 0rem;">
+          <div>
             <p>Ved siden av å lage nettsider prøver jeg også å oppgradere kunnskapene mine ved blant annet å ta kurs på Udemy.com. Her er en liste over de kursene jeg har tatt og anbefaler hvis man ønsker å lære mer om webutvikling.</p>
-            <img src="../../static/img/anbefalinger/udemy/logo-udemy.svg" alt="" style="height:3rem;width:inherit" />
+            <img src="../../static/img/anbefalinger/udemy/logo-udemy.svg" alt="" style="height:3rem;width:inherit;margin-bottom:2rem;" />
           </div>
           <div>
             <img class="udemy" src="../../static/img/anbefalinger/udemy/udemy-js.jpg" alt="">
@@ -74,7 +79,7 @@
           </div>
 
           <!-- Books -->
-          <h3 style="margin-top:7rem;">For lære mer om design anbefaler jeg disse bøkene:</h3>
+          <h3 style="margin-top:7rem;">For å lære mer om design anbefaler jeg disse bøkene:</h3>
           <div>
             <img class="udemy" src="../../static/img/anbefalinger/books/book-visuell-identitet.jpg" alt="">
             <h5>Visuell identitet</h5>
@@ -100,8 +105,8 @@
             <h5>Fargene forteller</h5>
             <h6>av Tove Steinbo</h6>
           </div>
-
         </div>
+      </div>
 
       </div>
     </section>
@@ -122,84 +127,82 @@ export default {
   @import '../assets/scss/main.scss';
 
   .about {
-    .about-container {
-      font-family: $primary-font;
-      margin: 0 auto;
-      padding-top: 6%;
-      width: 83%;
-
-      h3 {
-        margin-top: -1rem;
-        margin-bottom: 2.5rem;
-      }
-
-      .about-links {
-        justify-content: space-between;
+    .about-flex {
+      // border: 1px dashed red;
+      display: flex;
+      justify-content: center;
+      .about-container {
         // border: 1px dashed red;
-        display: flex;
-        // margin-top: 3rem;
-
-        h6 {
-          // border: 1px dashed red;
-          color: lightgrey;
-          cursor: pointer;
-          margin: 0;
-          text-transform: uppercase;
-        }
-        h6:hover {
-          color: red;
-        }
-        .activeLink {
-          color: red;
-        }
-      }
-
-      hr {
-        margin-bottom: 1rem;
-      }
-
-      .about-links-content{
-        position: relative;
-
-        .about-links-om-meg,
-        .about-links-skills,
-        .about-links-anbefalinger {
-          position: absolute;
-          margin-bottom: 11rem;
+        font-family: $primary-font;
+        padding: 3rem;
+        width: 100%;
+        h3 {
+          margin-top: -1rem;
+          margin-bottom: 2.5rem;
         }
 
-        // SKILLS STYLES
-        .logo-firm-container {
-          align-content: space-between;
-          align-items: center;
+        .about-links {
+          justify-content: space-between;
           // border: 1px dashed red;
           display: flex;
-          flex-wrap: wrap;
-          // justify-content: space-between;
-
-          .logo-firm-img {
-            height: 4rem;
-            margin: 1.5rem 1rem;
+          h6 {
+            // border: 1px dashed red;
+            color: lightgrey;
+            cursor: pointer;
+            margin: 0;
+            text-transform: uppercase;
           }
-          .logo-firm-img:first-child {
-            margin-left: 0;
+          h6:hover {
+            color: red;
+          }
+          .activeLink {
+            color: red;
           }
         }
-        // ANBEFALINGER STYLES
-        .about-links-anbefalinger {
-          div {
-            margin: 1.5rem 0rem 4rem 0rem;
 
-            img {
-              width: 100%;
+        hr {
+          margin-bottom: 2.5rem;
+        }
+
+        .about-links-content{
+          position: relative;
+          .about-links-om-meg,
+          .about-links-skills,
+          .about-links-anbefalinger {
+            position: absolute;
+            margin-bottom: 11rem;
+          }
+
+          // SKILLS STYLES
+          .logo-firm-container {
+            align-content: space-between;
+            align-items: center;
+            // border: 1px dashed red;
+            display: flex;
+            flex-wrap: wrap;
+            .logo-firm-img {
+              height: 4rem;
+              margin: 1.5rem 1rem;
             }
-            h5 {
-              margin: 1rem 0rem .5rem 0rem;
+            .logo-firm-img:first-child {
+              margin-left: 0;
             }
-            h6 {
-              font-size: 1.4rem;
-              font-weight: 400;
-              margin: .5rem 0rem;
+          }
+
+          // ANBEFALINGER STYLES
+          .about-links-anbefalinger {
+            div {
+              img {
+                width: 100%;
+              }
+              h5 {
+                margin: 1rem 0rem .5rem 0rem;
+              }
+              h6 {
+                font-size: 1.4rem;
+                font-weight: 400;
+                margin: .5rem 0rem;
+              }
             }
           }
         }
