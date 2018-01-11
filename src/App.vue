@@ -26,7 +26,7 @@ export default {
 
 <style lang="scss">
   html {font-size: 62.5%;
-    @media (min-width: 900px) {font-size: 100%;}}
+    @media (min-width: 900px) {font-size: 90%;}}
   h1 {font-size: 3.3rem;}  // TITLE
   h2 {font-size: 2.9rem;}  // ALT TITLE
   h3 {font-size: 2.1rem;}

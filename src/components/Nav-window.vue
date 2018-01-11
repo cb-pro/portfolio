@@ -63,7 +63,7 @@ export default {
   @import '../assets/scss/main.scss';
 
   .nav-window {
-    background: #eeeded;
+    background: #fafafa;
     bottom: 0;
     font-family: $primary-font;
     left: 0;

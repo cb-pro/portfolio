@@ -3,7 +3,7 @@
     <button @click="redirect" style="position:fixed;bottom:0;opacity:.1;">Link</button>
     <section class="intro-container">
       <div class="logo">
-        <img src="../../static/gfx/logos/bogsti-logo-fill.svg" alt="">
+        <img src="../../static/gfx/logos/bogsti-logo-chromata.jpg" alt="">
       </div>
       <div class="text">
         <h2>Christoffer Bogsti</h2>
@@ -19,6 +19,23 @@ export default {
     redirect () {
       this.$router.push('hjem')
     }
+  },
+  created () {
+    // var image = document.querySelector('img')
+    //
+    // chromata = new Chromata(image, {
+    //   colorMode: 'greyscale',
+    //   compositeOperation: 'lighten',
+    //   iterationLimit: 0,
+    //   key: 'high',
+    //   lineWidth: 1,
+    //   lineMode: 'square',
+    //   origin: ['bottom'],
+    //   outputSize: 'original',
+    //   pathFinderCount: 12,
+    //   speed: 3,
+    //   turningAngle: Math.PI * 2
+    // })
   }
 }
 </script>
@@ -50,7 +67,8 @@ export default {
         height: 100%;
         justify-content: center;
         img {
-          margin-bottom: 5rem;
+          width: 160px;
+          // margin-bottom: 5rem;
         }
       }
 

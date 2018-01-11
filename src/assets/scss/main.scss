@@ -1,1 +1,31 @@
 @import 'variables';
+
+
+
+/* IKEA FONTS */
+@font-face {
+  font-family: 'verdana';
+  src: url('../../static/fonts/verdana/Verdana.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'verdana-bold';
+  src: url('../../static/fonts/verdana/Verdana-Bold.ttf');
+  font-weight: 600;
+}
+
+// JSON DATA SPECIAL STYLE
+.content-ikea {
+  h4 {
+    font-family: 'verdana-bold';
+    font-size: 1.55rem;
+  }
+  p {
+    font-family: 'verdana';
+    font-size: 1.5rem;
+  }
+}
+
+
+/* DISNEY FONTS */
