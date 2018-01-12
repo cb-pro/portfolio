@@ -27,9 +27,9 @@
         <div class="next-btn" @click="nextProject" :class="{ styleNextDisabled: this.nextDisabled }">
           <img class="projects-btn-next" src="../../static/gfx/ui/next-project.svg" alt="" />
         </div>
-        <div class="text" @click="toggleText" :class="{ styleTextDisabled: this.$store.state.textDisabled }">
+        <!-- <div class="text" @click="toggleText" :class="{ styleTextDisabled: this.$store.state.textDisabled }">
           <img class="projects-btn-text" src="../../static/gfx/ui/text.svg" alt="" />
-        </div>
+        </div> -->
       </nav>
     </section>
 

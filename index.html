@@ -25,12 +25,14 @@
         for (var file of chunk.files) {
           if (file.match(/\.(js|css)$/)) { %>
     <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>"><% }}} %>
-    <script src="./static/js/chromata.min.js" type="text/javascript"></script>
+    <!-- <script src="./static/js/chromata.min.js" type="text/javascript"></script> -->
+    <!-- <script src="https://raw.githubusercontent.com/michaelbromley/chromata/master/dist/chromata.min.js"></script> -->
   </head>
   <body>
     <noscript>
       This is your fallback content in case JavaScript fails to load.
     </noscript>
+    <!-- <script src="https://raw.githubusercontent.com/michaelbromley/chromata/master/dist/chromata.min.js"></script> -->
     <div id="app"></div>
     <!-- Todo: only include in production -->
     <%= htmlWebpackPlugin.options.serviceWorkerLoader %>

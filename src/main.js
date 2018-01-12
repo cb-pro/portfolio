@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import { store } from './store/store'
+// import chromata from '../static/js/chromata.min.js'
+// let chromata = require('../static/js/chromata.js')
 
 Vue.config.productionTip = false
 

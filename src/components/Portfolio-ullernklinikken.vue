@@ -15,16 +15,18 @@
       </div>
     </section>
 
-    <div class="extended-background" :class="{ hidden: this.$store.state.toggleText }"></div>
+    <div class="extended-background"></div>
 
-    <section class="images">
-      <img src="../../static/img/portfolio/ullernklinikken-head.jpg" alt="">
-      <img src="../../static/img/portfolio/ullernklinikken-home-Low.jpg" alt="">
-      <img src="../../static/img/portfolio/ullernklinikken-order-ow.jpg" alt="">
-      <img src="../../static/img/portfolio/ullernklinikken-info-low.jpg" alt="">
-      <img src="../../static/img/portfolio/ullernklinikken-employees-low.jpg" alt="">
-      <img src="../../static/img/portfolio/ullernklinikken-contact-low.jpg" alt="">
-      <img src="../../static/img/portfolio/ullernklinikken-ipad-low.jpg" alt="">
+    <section class="images-flex">
+      <div class="images-container">
+        <img src="../../static/img/portfolio/ullernklinikken-head.jpg" alt="">
+        <img src="../../static/img/portfolio/ullernklinikken-home-Low.jpg" alt="">
+        <img src="../../static/img/portfolio/ullernklinikken-order-ow.jpg" alt="">
+        <img src="../../static/img/portfolio/ullernklinikken-info-low.jpg" alt="">
+        <img src="../../static/img/portfolio/ullernklinikken-employees-low.jpg" alt="">
+        <img src="../../static/img/portfolio/ullernklinikken-contact-low.jpg" alt="">
+        <img src="../../static/img/portfolio/ullernklinikken-ipad-low.jpg" alt="">
+      </div>
     </section>
   </div>
 </template>
@@ -36,9 +38,11 @@ export default {
 
 <style lang="scss" scoped>
   .ullernklinikken {
+    // background: grey;
     font-family: helvetica, arial, sans-serif;
     margin: 0;
     padding: 0;
+    height: 100%;
 
     .hidden {
       opacity: 0;
@@ -56,7 +60,7 @@ export default {
       top: 0rem;
       width: 100%;
       transition: .5s ease-in-out;
-      z-index: 5;
+      z-index: 0;
 
       .text-container {
         // border: 1px dashed red;
@@ -89,31 +93,58 @@ export default {
       }
     }
 
-    .extended-background {
-      background: hsla(0,0%,100%,1);
-      bottom: -20rem;
-      position: fixed;
-      top: -20rem;
-      transition: .5s ease-in-out;
-      width: 100%;
-    }
+    // .extended-background {
+    //   background: hsla(50,0%,50%,1);
+    //   bottom: 20rem;
+    //   position: absolute;
+    //   top: 20rem;
+    //   // height: 100%;
+    //   transition: .5s ease-in-out;
+    //   width: 100%;
+    // }
 
-    .images {
-      line-height: 0;
-      margin: 0px auto;
-      padding: 0px;
-      width: 83%;
-      img {
-        box-shadow: .6rem .9rem .9rem #d9d9d9;
-        margin: 2rem 0;
-        padding: 0px;
+
+    .images-flex {
+      // align-items: flex-end;
+      // background: #fff;
+      // border: 1px dashed red;
+      height: 100%;
+      // top: 0;
+      // bottom: -200px;
+      display: flex;
+      height: 100%;
+      // padding: 0 3rem;
+      // position: absolute;
+      transform: translateY(100%);
+      width: 100%;
+
+      .images-container {
+        // background: yellow;
+        border: 1px dashed red;
+        // display: flex;
+        // flex-direction: column;
+        line-height: 0;
+        padding: 0 3rem;
+        height: 200%;
+        // position: absolute;
+        // bottom: 20px;
         width: 100%;
-      }
-      img:first-child {
-        margin: 4rem 0 2rem 0;
-      }
-      img:last-child {
-        margin: 2rem 0 11rem 0;
+        img {
+          background: #fff;
+          box-shadow: .6rem .9rem .9rem #d9d9d9;
+          // margin: 2rem 0;
+          padding: 3rem 0rem;
+          margin-bottom: 2rem;
+          width: 100%;
+        }
+        img:first-child {
+          padding: 4rem 0 2rem 0;
+          margin-bottom: 2rem
+        }
+        img:last-child {
+          padding: 2rem 0 0 0;
+          margin-bottom: 11rem
+        }
       }
     }
   }

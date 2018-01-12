@@ -3,7 +3,7 @@
     <button @click="redirect" style="position:fixed;bottom:0;opacity:.1;">Link</button>
     <section class="intro-container">
       <div class="logo">
-        <img src="../../static/gfx/logos/bogsti-logo-chromata.jpg" alt="">
+        <img ref="img" src="../../static/gfx/logos/bogsti-logo-chromata.jpg" alt="" style="opacity:0;">
       </div>
       <div class="text">
         <h2>Christoffer Bogsti</h2>
@@ -14,28 +14,37 @@
 </template>
 
 <script>
+// import chromata from '../../static/js/chromata.js'
+import Chromata from '../utils/chromata/chromata.js'
+
 export default {
+  data () {
+    return {
+      chromata: null
+    }
+  },
   methods: {
     redirect () {
       this.$router.push('hjem')
     }
   },
-  created () {
-    // var image = document.querySelector('img')
-    //
-    // chromata = new Chromata(image, {
-    //   colorMode: 'greyscale',
-    //   compositeOperation: 'lighten',
-    //   iterationLimit: 0,
-    //   key: 'high',
-    //   lineWidth: 1,
-    //   lineMode: 'square',
-    //   origin: ['bottom'],
-    //   outputSize: 'original',
-    //   pathFinderCount: 12,
-    //   speed: 3,
-    //   turningAngle: Math.PI * 2
-    // })
+  mounted () {
+    var image = this.$refs.img
+
+    this.chromata = new Chromata(image, {
+      colorMode: 'greyscale',
+      compositeOperation: 'lighten',
+      iterationLimit: 0,
+      key: 'high',
+      lineWidth: 1,
+      lineMode: 'square',
+      origin: ['bottom'],
+      outputSize: 'original',
+      pathFinderCount: 13,
+      speed: 3,
+      turningAngle: Math.PI * 2
+    })
+    this.chromata.start()
   }
 }
 </script>
@@ -66,7 +75,7 @@ export default {
         display: flex;
         height: 100%;
         justify-content: center;
-        img {
+        img, canvas {
           width: 160px;
           // margin-bottom: 5rem;
         }
