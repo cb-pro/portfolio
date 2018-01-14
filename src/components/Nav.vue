@@ -6,7 +6,7 @@
     <section class="nav-btn-flex">
       <div class="nav-btn-container">
         <div class="nav-btn" @click="toggleNavBtn">
-          <img class="nav-btn-menu-icon" src="../../static/gfx/ui/menu-icon.svg" alt="">
+          <img class="nav-btn-menu-icon" src="../../static/gfx/ui/menu-lines.svg" alt="">
         </div>
       </div>
     </section>
@@ -64,13 +64,13 @@ export default {
         .nav-btn {
           background: grey;
           border-radius: 50%;
-          height: 45px;
-          width: 45px;
+          height: 4.5rem;
+          width: 4.5rem;
           display: flex;
           justify-content: center;
           align-items: center;
           .nav-btn-menu-icon {
-            height: 2rem;
+            height: 1.5rem;
           }
         }
       }

@@ -14,7 +14,7 @@
         <section class="nav-links-flex">
           <div class="nav-links-container">
             <h2>Navigasjon</h2>
-            <router-link to="/hjem"><h3 @click="toggleNavBtn('Hjem')">Hjem</h3></router-link>
+            <router-link to="/identitet"><h3 @click="toggleNavBtn('Identitet')">Identitet</h3></router-link>
             <router-link to="/om-meg"><h3 @click="toggleNavBtn('Om meg')">Om meg</h3></router-link>
             <router-link to="/portfolio"><h3 @click="toggleNavBtn('Portfolio')">Portfolio</h3></router-link>
           </div>
@@ -77,7 +77,7 @@ export default {
       justify-content: center;
       .nav-container {
         // border: 1px dashed red;
-        max-width: 600px;
+        max-width: 900px;
         padding: 3rem;
         width: 100%;
       }

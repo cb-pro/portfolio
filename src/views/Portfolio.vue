@@ -1,243 +1,89 @@
 <template lang="html">
   <div class="portfolio">
+    <section class="flex">
+      <div class="container">
+        <h1>Portfolio</h1>
 
-    <!-- PROJECTS COMPONENTS -->
-    <transition name="portfolio-fade">
-    <compUllernklinikken class="pro ullernklinikken" v-if="index === 1" />
-    </transition>
-    <transition name="portfolio-fade">
-    <compMinvoice class="pro minvoice" v-if="index === 2" />
-    </transition>
-    <transition name="portfolio-fade">
-    <compFraUngdommen class="pro fra-ungdommen" v-if="index === 3" />
-    </transition>
-    <transition name="portfolio-fade">
-    <compBusemannen class="pro busemannen" v-if="index === 4" />
-    </transition>
-
-    <!-- SCROLL DOWN  -->
-    <!-- <img class="scroll-down" src="../../static/gfx/ui/scroll-down.svg" alt=""> -->
-
-    <!-- PROJECT NAV BUTTONS  -->
-    <section class="nav-buttons-flex">
-      <nav class="nav-buttons-container">
-        <div class="prev-btn" @click="prevProject" :class="{ stylePrevDisabled: this.prevDisabled }">
-          <img class="projects-btn-prev" src="../../static/gfx/ui/previous-project.svg" alt="" />
+        <div class="projects" @click="redirectTo('/portfolio/ullernklinikken')">
+          <img src="../../static/img/portfolio/ullernklinikken-head.jpg" alt="">
+          <h5>Ullernklinikken</h5>
+          <h6>Webapplikasjon for Ullernklinikken.no </h6>
         </div>
-        <div class="next-btn" @click="nextProject" :class="{ styleNextDisabled: this.nextDisabled }">
-          <img class="projects-btn-next" src="../../static/gfx/ui/next-project.svg" alt="" />
+        <div class="projects" @click="redirectTo('/portfolio/minvoice')">
+          <img src="../../static/img/portfolio/minvoice-head.jpg" alt="">
+          <h5>mInvoice<sup style="font-size:1rem">®</sup></h5>
+          <h6>App design for minvoice<sup style="font-size:.5rem">®</sup></h6>
         </div>
-        <!-- <div class="text" @click="toggleText" :class="{ styleTextDisabled: this.$store.state.textDisabled }">
-          <img class="projects-btn-text" src="../../static/gfx/ui/text.svg" alt="" />
-        </div> -->
-      </nav>
+        <div class="projects" @click="redirectTo('/portfolio/fra-ungdommen')">
+          <img src="../../static/img/portfolio/fra_ung_00-head.jpg" alt="">
+          <h5>Fra Ungdommen</h5>
+          <h6>Ebok for Cappelen Damm</h6>
+        </div>
+        <div class="projects" @click="redirectTo('/portfolio/busemannen')">
+          <img src="../../static/img/portfolio/busemannen-illustrasjon-retouch.jpg" alt="">
+          <h5>Busemannen</h5>
+          <h6>Bokomslag for Cappelen Damm</h6>
+        </div>
+
+      </div>
     </section>
+
 
   </div>
 </template>
 
 <script>
-import Ullernklinikken from '../components/Portfolio-ullernklinikken.vue'
-import Minvoice from '../components/Portfolio-minvoice.vue'
-import FraUngdommen from '../components/Portfolio-fra_ungdommen.vue'
-import Busemannen from '../components/Portfolio-busemannen.vue'
-
 export default {
-  components: {
-    'compUllernklinikken': Ullernklinikken,
-    'compMinvoice': Minvoice,
-    'compFraUngdommen': FraUngdommen,
-    'compBusemannen': Busemannen
-  },
-  //
-  /* !!! DATA !!! */
-  data () {
-    return {
-      index: 1,
-      projects: 4,
-      prevDisabled: true,
-      nextDisabled: false
-      // textDisabled: true
-    }
-  },
-  //
-  /* !!! CREATED !!! */
-  created () {
-    // invokes activateListen in methods
-    this.activateListen()
-
-    this.$store.state.textDisabled = true
-    // console.log('textDisabled = ' + this.$store.state.textDisabled)
-
-    // this.$store.watch((state) => {
-    //   console.log('textDisabled = ' + this.$store.state.textDisabled) // could also put a Getter here
-    // })
-
-    window.addEventListener('scroll', this.handleScroll)
-  },
-  //
-  /* !!! DESTROY !!! */
-  destroy () {
-    window.removeEventListener('scroll', this.handleScroll)
-  },
-  //
-  /* !!! METHODS !!! */
   methods: {
-    // makes it possible to toggleText with scrolling
-    // 1 second delay for smoother experience
-    activateListen () {
-      setTimeout(() => {
-        this.$store.state.listenToScroll = true
-        // console.log('listenToScroll is active')
-      }, 1500)
-    },
-    handleScroll () {
-      if (this.$store.state.listenToScroll === true) {
-        this.$store.state.listenToScroll = false
-        // console.log('listenToScroll is disabled')
-        this.$store.state.toggleText = true
-        this.$store.state.textDisabled = false
-      }
-    },
-    // Previous Project Button
-    prevProject () {
-      if (this.index > 1) {
-        this.index -= 1
-        this.$store.state.toggleText = false
-        this.$store.state.textDisabled = true
-        this.nextDisabled = false
-        this.activateListen()
-        setTimeout(function () {
-          window.scrollTo(0, 0)
-        }, 500)
-        if (this.index === 1) {
-          this.prevDisabled = true
-        }
-      }
-    },
-    // Next Project Button
-    nextProject () {
-      if (this.index < this.projects) {
-        this.index += 1
-        this.$store.state.toggleText = false
-        this.$store.state.textDisabled = true
-        this.prevDisabled = false
-        this.activateListen()
-        setTimeout(function () {
-          window.scrollTo(0, 0)
-        }, 500)
-        if (this.index === this.projects) {
-          this.nextDisabled = true
-        }
-      }
-    },
-    // Toggle Text Button
-    toggleText () {
-      this.$store.state.toggleText = !this.$store.state.toggleText
-      this.$store.state.textDisabled = !this.$store.state.textDisabled
-      this.activateListen()
-      setTimeout(function () {
-        window.scrollTo(0, 0)
-      }, 500)
+    redirectTo (url) {
+      this.$router.push(url)
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
-  // VUE TRANSITIONS
-  .portfolio-fade-enter-active {
-    transition: all .5s ease-in-out;
-    transition-delay: .5s;
+<style lang="scss">
+  @import '../assets/scss/main.scss';
 
-  }
-  .portfolio-fade-leave-active {
-    transition: all .5s ease-in-out;
 
-  }
-  .portfolio-fade-enter, .portfolio-fade-leave-to {
-    opacity: 0;
-  }
+  .portfolio {
+    font-family: $primary-font;
+    .flex {
+      display: flex;
+      justify-content: center;
+      .container {
+        max-width: $max-width;
+        padding: 3rem;
+        width: 100%;
+        h1 {
 
-  // PROJECTS COMPONENTS STYLE
-  .portfolio{
-
-    .pro {
-      position: absolute;
-    }
-
-    .ullernklinikken {
-      width: 100%;
-    }
-
-    .minvoice {
-      width: 100%;
-    }
-
-    .fra-ungdommen {
-      width: 100%;
-    }
-
-    .busemannen {
-      width: 100%;
-    }
-
-    /* SCROLL DOWN */
-    // .scroll-down {
-    //   bottom: 11rem;
-    //   height: 8rem;
-    //   position: absolute;
-    //   right: 3rem;
-    //   transform: translateX(-.85rem);
-    // }
-
-    // NAV PROJECTS BUTTONS
-    .nav-buttons-flex {
-      bottom: 3rem;
-      position: fixed;
-      z-index: 5;
-      .nav-buttons-container {
-        // border: 1px dashed red;
-        display: flex;
-        flex-direction: row;
-        line-height: 0;
-        margin-left: 3rem;
-
-        div {
-          align-items: center;
-          background: grey;
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          height: 45px;
-          margin-right: 10px;
-          transition: 500ms ease-in-out;
-          width: 45px;
-          &:last-child {margin-right: 0;}
-
-          img {
-            height: 2.5rem;
+        }
+        .projects {
+          cursor: pointer;
+          margin-bottom: 4rem;
+          &:last-child {
+            margin-bottom: 8rem;
           }
-        }
-        // SVG IMG'S
-        .projects-btn-prev {
-          transform: translateX(-.2rem);
-        }
-        .projects-btn-next {
-          transform: translateX(.2rem);
-        }
-        .projects-btn-text {
-          height: 1.5rem;
-        }
-        // BUTTON INTERACTIVE STYLES
-        .text {
-          transition: 500ms ease-in-out;
-        }
-        .stylePrevDisabled,
-        .styleNextDisabled,
-        .styleTextDisabled {
-          background: lightgrey;
-          transition: 500ms ease-in-out;
+          box-shadow: 0 .5rem 1.6rem #e6e4e4;
+            &:hover {
+              opacity: .5;
+            }
+            &:active {
+              transform: scale(.995);
+            }
+          img {
+            width: 100%;
+          }
+          h5 {
+            padding: 0 0 0 2rem;
+            margin: 1rem 0rem .25rem 0rem;
+          }
+          h6 {
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin: 0rem 0rem;
+            padding: 0 0 2rem 2rem;
+          }
         }
       }
     }

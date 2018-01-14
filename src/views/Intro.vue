@@ -1,12 +1,12 @@
 <template lang="html">
   <div class="intro">
-    <button @click="redirect" style="position:fixed;bottom:0;opacity:.1;">Link</button>
+    <!-- <div class="enter-site" @click="redirect"></div> -->
     <section class="intro-container">
       <div class="logo">
         <img ref="img" src="../../static/gfx/logos/bogsti-logo-chromata.jpg" alt="" style="opacity:0;">
       </div>
       <div class="text">
-        <h2>Christoffer Bogsti</h2>
+        <h3>Christoffer Bogsti</h3>
         <h6>Designer & Utvikler</h6>
       </div>
     </section>
@@ -24,9 +24,9 @@ export default {
     }
   },
   methods: {
-    redirect () {
-      this.$router.push('hjem')
-    }
+    // redirect () {
+    //   this.$router.push('hjem')
+    // }
   },
   mounted () {
     var image = this.$refs.img
@@ -40,7 +40,7 @@ export default {
       lineMode: 'square',
       origin: ['bottom'],
       outputSize: 'original',
-      pathFinderCount: 13,
+      pathFinderCount: 16,
       speed: 3,
       turningAngle: Math.PI * 2
     })
@@ -58,7 +58,18 @@ export default {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 99;
+    // z-index: 99;
+
+    // .enter-site {
+    //   background: crimson;
+    //   border-radius: 50%;
+    //   bottom: 3rem;
+    //   height: 4.5rem;
+    //   opacity: 1;
+    //   position: fixed;
+    //   right: 3rem;
+    //   width: 4.5rem
+    // }
 
     .intro-container {
       // align-items: center;
@@ -73,10 +84,12 @@ export default {
       .logo {
         align-items: center;
         display: flex;
-        height: 100%;
+        height: 90%;
         justify-content: center;
         img, canvas {
-          width: 160px;
+          position: relative;
+          // transform: translateY(-50%);
+          width: 16rem;
           // margin-bottom: 5rem;
         }
       }
@@ -87,11 +100,11 @@ export default {
         padding-left: 2rem;
         position: absolute;
 
-        h2,h6 {
+        h3,h6 {
           margin: 0rem;
         }
 
-        h2 {
+        h3 {
 
         }
         h6 {

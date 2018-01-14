@@ -5,8 +5,8 @@
 
         <h1>Busemannen</h1>
         <h4>
-          Bokomslag for Cappelen Damm. <br />
-          Samarbeid med Bente C. Bergan.
+          Bokomslag for Cappelen Damm <br />
+          Samarbeid med Bente C. Bergan
         </h4>
         <p>
           Knut Nærum og fire av forfatterne bak Nytt på nytt har rottet seg sammen om en saftig parodi på Jo Nesbøs Harry Hole-bøker. Helten er mer sliten, Oslo er råtnere og volden er nesten like drøy.
@@ -16,15 +16,34 @@
       </div>
     </section>
 
-    <div class="extended-background" :class="{ hidden: this.$store.state.toggleText }"></div>
+    <div class="extended-background"></div>
 
-    <section class="images">
-      <img src="../../static/img/portfolio/busemannen-illustrasjon-retouch.jpg" alt="">
-      <img src="../../static/img/portfolio/busemannen-ylvis_01.jpg" alt="">
-      <img src="../../static/img/portfolio/busemannen-ylvis_02.jpg" alt="">
-      <img src="../../static/img/portfolio/busemannen-ylvis_03.jpg" alt="">
-      <img src="../../static/img/portfolio/busemannen-skeleton.jpg" alt="">
+    <section class="images-flex">
+      <div class="images-container">
+        <div>
+          <img src="../../static/img/portfolio/busemannen-illustrasjon-retouch.jpg" alt="">
+        </div>
+        <div>
+          <img src="../../static/img/portfolio/busemannen-ylvis_01.jpg" alt="">
+        </div>
+        <div>
+          <img src="../../static/img/portfolio/busemannen-ylvis_02.jpg" alt="">
+        </div>
+        <div>
+          <img src="../../static/img/portfolio/busemannen-ylvis_03.jpg" alt="">
+        </div>
+        <div>
+          <img src="../../static/img/portfolio/busemannen-skeleton.jpg" alt="">
+        </div>
+      </div>
     </section>
+
+    <nav class="next-project-container">
+      <div class="next-project-btn">
+        <router-link to="/portfolio">Tilbake til Portfolio</router-link>
+      </div>
+    </nav>
+
   </div>
 </template>
 
@@ -34,7 +53,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import '../assets/scss/main.scss';
+
+
   .busemannen {
+    // background: grey;
     font-family: helvetica, arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -46,7 +69,7 @@ export default {
     }
 
     .text-flex {
-      // background: hsla(0,0%,0%,1);
+      // background: hsla(0,50%,50%,.4);
       // border: 1px dashed red;
       bottom: 0rem;
       display: flex;
@@ -56,15 +79,19 @@ export default {
       width: 100%;
       transition: .5s ease-in-out;
       z-index: 5;
+      @media (min-width:900px) {
+        align-items: center;
+        transform: translateY(-12.5%);
+      }
 
       .text-container {
         // border: 1px dashed red;
+        max-width: $max-width;
         padding: 3rem;
 
         h1 {
           // border: 1px dashed red;
           color: red;
-          // font-size: 2em;
         }
         h4 {
           color: yellow;
@@ -75,7 +102,7 @@ export default {
           margin-top: -.6rem;
         }
         hr {
-          width: 100%;
+          width: 99%;
         }
         .my-logos {
           // border: 1px dashed red;
@@ -91,28 +118,77 @@ export default {
       bottom: -20rem;
       position: fixed;
       top: -20rem;
-      transition: .5s ease-in-out;
+      // transition: .5s ease-in-out;
       width: 100%;
     }
 
-    .images {
-      margin: 0px auto;
-      padding: 0px;
-      line-height: 0;
-      width: 83%;
-      img {
-        box-shadow: .6rem .9rem .9rem #d9d9d9;
-        margin: 2rem 0;
-        padding: 0px;
-        width: 100%;
+
+    .images-flex {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      transform: translateY(100%);
+      width: 100%;
+      z-index: 6;
+      .images-container {
+        line-height: 0;
+        max-width: $max-width;
+
+        div {
+          background: #000;
+          // border: 2px solid lime;
+          padding: 2rem 3rem;
+          @media (min-width: 900px) {
+            padding: 2rem 0rem;
+          }
+          &:last-child {
+            margin-bottom: 9rem;
+          }
+          img {
+            // box-shadow: 0 .5rem 1.6rem #535353;
+            width: 100%;
+          }
+        }
       }
-      img:first-child {
-        margin: 4rem 0 2rem 0;
-      }
-      img:last-child {
-        margin: 2rem 0 11rem 0;
+    }
+
+    .next-project-container {
+      bottom: 3rem;
+      left: 3rem;
+      position: fixed;
+      z-index: 6;
+      .next-project-btn {
+        background: hsla(0,0%,0%,.2);
+        align-items: center;
+        border: .2rem solid lightgrey;
+        border-radius: 50rem;
+        display: flex;
+        height: 4.5rem;
+        justify-content: center;
+        width: 17rem;
+        &:active {
+          transform: scale(.95);
+          transform-origin: center;
+        }
+        &:hover {
+          background: lightgrey;
+          cursor: pointer;
+          a {
+            color: grey;
+          }
+        }
+        a {
+          color: lightgrey;
+          font-size: 1.6rem;
+          margin: 0;
+          text-decoration: none;
+        }
       }
     }
   }
+
+
+
 
 </style>

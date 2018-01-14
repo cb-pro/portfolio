@@ -1,9 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Intro from '@/views/Intro.vue'
-import Hjem from '@/views/Home.vue'
+import Identitet from '@/views/Identitet.vue'
 import OmMeg from '@/views/About.vue'
 import Portfolio from '@/views/Portfolio.vue'
+import Ullernklinikken from '@/components/Portfolio-ullernklinikken.vue'
+import mInvoice from '@/components/Portfolio-minvoice.vue'
+import FraUngdommen from '@/components/Portfolio-fra_ungdommen.vue'
+import Busemannen from '@/components/Portfolio-busemannen.vue'
 
 import Test from '@/views/Test.vue'
 
@@ -18,9 +22,9 @@ export default new Router({
       component: Intro
     },
     {
-      path: '/Hjem',
-      name: 'Hjem',
-      component: Hjem
+      path: '/identitet',
+      name: 'Identitet',
+      component: Identitet
     },
     {
       path: '/om-meg',
@@ -33,9 +37,32 @@ export default new Router({
       component: Portfolio
     },
     {
+      path: '/portfolio/ullernklinikken',
+      name: 'Ullernklinikken',
+      component: Ullernklinikken
+    },
+    {
+      path: '/portfolio/minvoice',
+      name: 'mInvoice',
+      component: mInvoice
+    },
+    {
+      path: '/portfolio/fra-ungdommen',
+      name: 'Fra Ungdommen',
+      component: FraUngdommen
+    },
+    {
+      path: '/portfolio/busemannen',
+      name: 'Busemannen',
+      component: Busemannen
+    },
+    {
       path: '/test',
       name: 'Test',
       component: Test
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })
