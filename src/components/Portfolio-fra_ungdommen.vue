@@ -70,8 +70,8 @@
     </section>
 
     <nav class="next-project-container">
-      <div class="next-project-btn">
-        <router-link to="/portfolio/busemannen">Neste Prosjekt</router-link>
+      <div class="next-project-btn" @click="redirectTo">
+        <p>Tilbake til Portfolio</p>
       </div>
     </nav>
 
@@ -80,6 +80,11 @@
 
 <script>
 export default {
+  methods: {
+    redirectTo () {
+      this.$router.go(-1)
+    }
+  }
 }
 </script>
 
@@ -100,7 +105,6 @@ export default {
     }
 
     .text-flex {
-      // background: hsla(0,50%,50%,.4);
       // border: 1px dashed red;
       bottom: 0rem;
       display: flex;
@@ -203,7 +207,7 @@ export default {
         display: flex;
         height: 4.5rem;
         justify-content: center;
-        width: 14rem;
+        width: 17rem;
         &:active {
           transform: scale(.95);
           transform-origin: center;
@@ -211,11 +215,11 @@ export default {
         &:hover {
           background: grey;
           cursor: pointer;
-          a {
+          p {
             color: #fff;
           }
         }
-        a {
+        p {
           color: grey;
           font-size: 1.6rem;
           margin: 0;
@@ -226,100 +230,5 @@ export default {
   }
 
 
-
-
-
-  // .fra-ungdommen {
-  //   font-family: helvetica, arial, sans-serif;
-  //   margin: 0;
-  //   padding: 0;
-  //
-  //   .hidden {
-  //     opacity: 0;
-  //     visibility: hidden;
-  //     transition: .5s ease-in-out;
-  //   }
-  //
-  //   .text-flex {
-  //     background: hsla(0,0%,100%,1);
-  //     // border: 1px dashed red;
-  //     bottom: 0rem;
-  //     display: flex;
-  //     justify-content: center;
-  //     position: fixed;
-  //     top: 0rem;
-  //     width: 100%;
-  //     transition: .5s ease-in-out;
-  //     z-index: 5;
-  //
-  //     .text-container {
-  //       // border: 1px dashed red;
-  //       padding: 3rem;
-  //
-  //       h1 {
-  //         // border: 1px dashed red;
-  //         color: #008FD6;
-  //         // font-size: 2em;
-  //       }
-  //       h4 {
-  //         color: #2f2f2f;
-  //         font-weight: 300;
-  //         margin-top: -1.5rem;
-  //       }
-  //       p {
-  //         color: #000;
-  //         margin-top: -.6rem;
-  //       }
-  //       hr {
-  //         width: 100%;
-  //       }
-  //       .my-logos {
-  //         // border: 1px dashed red;
-  //         height: 4rem;
-  //         margin-top: .6rem;
-  //         margin-right: 1.3rem;
-  //         transform: translatex(.3rem);
-  //         vertical-align: middle;
-  //       }
-  //       .grafill-logo {
-  //         height: 3.3rem;
-  //       }
-  //     }
-  //   }
-  //
-  //   .extended-background {
-  //     background: hsla(0,0%,100%,1);
-  //     bottom: -20rem;
-  //     position: fixed;
-  //     top: -20rem;
-  //     transition: .5s ease-in-out;
-  //     width: 100%;
-  //   }
-  //
-  //   .images {
-  //     margin: 0px auto;
-  //     padding: 0px;
-  //     line-height: 0;
-  //     width: 83%;
-  //     video {
-  //       margin: 2rem 0 2rem 0;
-  //       // position: relative;
-  //       // z-index: -1;
-  //       // width: 100%;
-  //     }
-  //     img {
-  //       box-shadow: .6rem .9rem .9rem #d9d9d9;
-  //       margin: 2rem 0;
-  //       padding: 0px;
-  //       width: 100%;
-  //     }
-  //     img:first-child {
-  //       margin: 4rem 0 2rem 0;
-  //     }
-  //     img:last-child {
-  //       margin: 2rem 0 11rem 0;
-  //     }
-  //   }
-  // }
 
 </style>

@@ -7,7 +7,7 @@
 
         <!-- LINE -->
         <hr />
-        
+
 
         <div class="about-links-content">
 
@@ -203,6 +203,7 @@ export default {
               }
             }
           }
+          
         }
       }
     }

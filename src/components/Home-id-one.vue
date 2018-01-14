@@ -10,6 +10,10 @@
       </div>
     </section>
 
+    <div class="timer-bar-container">
+      <div class="timer-bar-fill"></div>
+    </div>
+
   </div>
 </template>
 
@@ -28,6 +32,7 @@ export default {
   @import '../assets/scss/main.scss';
 
   .home-id-one {
+    // height: 100%;
 
     .background {
       // background: red;
@@ -43,11 +48,40 @@ export default {
       // border: 1px dashed green;
       display: flex;
       justify-content: center;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      @media (min-width: 900px) {
+        align-items: center;
+        transform: translateY(-12%);
+      }
       .home-id-one-text-container {
         // border: 1px dashed red;
         color: #303030;
         font-family: $primary-font;
+        max-width: 900px;
         padding: 3rem 3rem;
+      }
+    }
+
+    .timer-bar-container {
+      // border: 1px solid grey;
+      border-right: 1px solid red;
+      bottom: 3rem;
+      height: 20px;
+      left: 3rem;
+      position: fixed;
+      width: 25%;
+      .timer-bar-fill {
+        background: red;
+        height: 100%;
+        animation-name: timer-bar;
+        animation-duration: 14.5s;
+        animation-timing-function: linear;
+      }
+      @keyframes timer-bar {
+        from {width: 0%;}
+        to {width: 100%;}
       }
     }
   }

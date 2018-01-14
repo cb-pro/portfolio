@@ -6,7 +6,8 @@
     <section class="nav-btn-flex">
       <div class="nav-btn-container">
         <div class="nav-btn" @click="toggleNavBtn">
-          <img class="nav-btn-menu-icon" src="../../static/gfx/ui/menu-lines.svg" alt="">
+          <img class="nav-btn-menu-icon" src="../../static/gfx/ui/menu-lines.svg" v-if="this.$store.state.showNav === false" alt="">
+          <img class="nav-btn-menu-icon" src="../../static/gfx/ui/menu-close.svg" v-if="this.$store.state.showNav === true" alt="">
         </div>
       </div>
     </section>
@@ -45,13 +46,13 @@ export default {
     .NavWindow {
       visibility: hidden;
       opacity: 0;
-      transition: .4s ease-in-out;
+      transition: .2s ease-in-out;
       z-index: -1;
     }
     .showNavWindow {
       visibility: visible;
       opacity: 1;
-      transition: .5s ease-in-out;
+      transition: .2s ease-in-out;
       z-index: 8;
     }
 
@@ -62,13 +63,21 @@ export default {
       z-index: 9;
       .nav-btn-container {
         .nav-btn {
+          align-items: center;
           background: grey;
           border-radius: 50%;
-          height: 4.5rem;
-          width: 4.5rem;
           display: flex;
+          height: 4.5rem;
           justify-content: center;
-          align-items: center;
+          width: 4.5rem;
+          &:hover {
+            @media (min-width: 900px) {
+              background: lightgrey;
+            }
+          }
+          &:active {
+            transform: scale(.95);
+          }
           .nav-btn-menu-icon {
             height: 1.5rem;
           }

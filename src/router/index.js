@@ -9,7 +9,7 @@ import mInvoice from '@/components/Portfolio-minvoice.vue'
 import FraUngdommen from '@/components/Portfolio-fra_ungdommen.vue'
 import Busemannen from '@/components/Portfolio-busemannen.vue'
 
-import Test from '@/views/Test.vue'
+// import Test from '@/views/Test.vue'
 
 Vue.use(Router)
 
@@ -55,12 +55,12 @@ export default new Router({
       path: '/portfolio/busemannen',
       name: 'Busemannen',
       component: Busemannen
-    },
-    {
-      path: '/test',
-      name: 'Test',
-      component: Test
     }
+    // {
+    //   path: '/test',
+    //   name: 'Test',
+    //   component: Test
+    // }
   ],
   scrollBehavior (to, from, savedPosition) {
     return { x: 0, y: 0 }

@@ -39,8 +39,8 @@
     </section>
 
     <nav class="next-project-container">
-      <div class="next-project-btn">
-        <router-link to="/portfolio">Tilbake til Portfolio</router-link>
+      <div class="next-project-btn" @click="redirectTo">
+        <p>Tilbake til Portfolio</p>
       </div>
     </nav>
 
@@ -49,6 +49,11 @@
 
 <script>
 export default {
+  methods: {
+    redirectTo () {
+      this.$router.go(-1)
+    }
+  }
 }
 </script>
 
@@ -69,7 +74,6 @@ export default {
     }
 
     .text-flex {
-      // background: hsla(0,50%,50%,.4);
       // border: 1px dashed red;
       bottom: 0rem;
       display: flex;
@@ -118,7 +122,6 @@ export default {
       bottom: -20rem;
       position: fixed;
       top: -20rem;
-      // transition: .5s ease-in-out;
       width: 100%;
     }
 
@@ -146,7 +149,6 @@ export default {
             margin-bottom: 9rem;
           }
           img {
-            // box-shadow: 0 .5rem 1.6rem #535353;
             width: 100%;
           }
         }
@@ -174,11 +176,11 @@ export default {
         &:hover {
           background: lightgrey;
           cursor: pointer;
-          a {
+          p {
             color: grey;
           }
         }
-        a {
+        p {
           color: lightgrey;
           font-size: 1.6rem;
           margin: 0;

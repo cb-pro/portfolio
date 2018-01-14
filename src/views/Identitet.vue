@@ -33,13 +33,13 @@ export default {
   },
   methods: {
     changeId () {
-      // setInterval(() => {
-      //   if (this.index < 5) {
-      //     this.index++
-      //   } else {
-      //     this.index = 2
-      //   }
-      // }, 15000)
+      setInterval(() => {
+        if (this.index < 5) {
+          this.index++
+        } else {
+          this.index = 2
+        }
+      }, 15000)
     }
   }
 }
@@ -48,8 +48,6 @@ export default {
 <style lang="scss">
   .home {
     .ids {
-      position: absolute;
-      // max-width: 900px;
     }
   }
 </style>

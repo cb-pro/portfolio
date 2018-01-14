@@ -32,8 +32,8 @@
     </section>
 
     <nav class="next-project-container">
-      <div class="next-project-btn">
-        <router-link to="/portfolio/fra-ungdommen">Neste Prosjekt</router-link>
+      <div class="next-project-btn" @click="redirectTo">
+        <p>Tilbake til Portfolio</p>
       </div>
     </nav>
 
@@ -42,6 +42,11 @@
 
 <script>
 export default {
+  methods: {
+    redirectTo () {
+      this.$router.go(-1)
+    }
+  }
 }
 </script>
 
@@ -62,7 +67,6 @@ export default {
     }
 
     .text-flex {
-      // background: hsla(0,50%,50%,.4);
       // border: 1px dashed red;
       bottom: 0rem;
       display: flex;
@@ -160,7 +164,7 @@ export default {
         display: flex;
         height: 4.5rem;
         justify-content: center;
-        width: 14rem;
+        width: 17rem;
         &:active {
           transform: scale(.95);
           transform-origin: center;
@@ -168,11 +172,11 @@ export default {
         &:hover {
           background: grey;
           cursor: pointer;
-          a {
+          p {
             color: #fff;
           }
         }
-        a {
+        p {
           color: grey;
           font-size: 1.6rem;
           margin: 0;
