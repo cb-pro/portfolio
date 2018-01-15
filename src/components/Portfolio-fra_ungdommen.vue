@@ -25,7 +25,7 @@
         <img src="../../static/img/portfolio/fra_ung_00-head.jpg" alt="">
         </div>
         <div>
-        <video width="100%" controls poster="../../static/video/fra-ungdommen-thumb.jpg">
+        <video controls poster="../../static/video/fra-ungdommen-thumb.jpg">
           <source src="../../static/video/fra-ungdommen-video.mp4" type="video/mp4" />
         </video>
           <!-- <iframe width="100%" src="https://www.youtube.com/embed/tCrSX4sGp4o?autoplay=0&autohide=2&border=0&wmode=opaque&enablejsapi=1&modestbranding=0&controls=2&showinfo=0&rel=0&amp;" frameborder="0" allowfullscreen></iframe> -->
@@ -55,16 +55,16 @@
           <img src="../../static/img/portfolio/fra_ung_08.jpg" alt="">
         </div>
         <div>
-          <img src="../../static/img/portfolio/fra_ung_09.jpg" alt="">
+          <img src="../../static/img/portfolio/fra_ung_09.jpg" alt="" style="border: .1rem solid grey">
         </div>
         <div>
           <img src="../../static/img/portfolio/fra_ung_10.jpg" alt="">
         </div>
         <div>
-          <img src="../../static/img/portfolio/fra_ung_11.jpg" alt="">
+          <img src="../../static/img/portfolio/fra_ung_11.jpg" alt="" style="border: .1rem solid grey">
         </div>
         <div>
-          <img src="../../static/img/portfolio/fra_ung_12.jpg" alt="">
+          <img src="../../static/img/portfolio/fra_ung_12.jpg" alt="" style="border: .1rem solid grey">
         </div>
       </div>
     </section>
@@ -92,6 +92,7 @@ export default {
   @import '../assets/scss/main.scss';
 
 
+
   .fra-ungdommen {
     // background: grey;
     font-family: helvetica, arial, sans-serif;
@@ -114,15 +115,11 @@ export default {
       width: 100%;
       transition: .5s ease-in-out;
       z-index: 0;
-      @media (min-width:900px) {
-        align-items: center;
-        transform: translateY(-12.5%);
-      }
 
       .text-container {
         // border: 1px dashed red;
-        max-width: $max-width;
         padding: 3rem;
+        width: 100%;
 
         h1 {
           // border: 1px dashed red;
@@ -173,26 +170,42 @@ export default {
       transform: translateY(100%);
       width: 100%;
       .images-container {
+        // border-top: .1rem solid grey;
         line-height: 0;
-        max-width: $max-width;
 
         div {
           background: #fff;
           // border: 2px solid lime;
           padding: 2rem 3rem;
           @media (min-width: 900px) {
-            padding: 2rem 0rem;
+            // padding: 2rem 0rem;
           }
           &:last-child {
             margin-bottom: 9rem;
           }
           img {
-            box-shadow: 0 .5rem 1.6rem #e6e4e4;
+            // box-shadow: 0 .5rem 1.6rem #e6e4e4;
+            border-bottom: .1rem solid grey;
             width: 100%;
+            @media (min-width: 900px) {
+              margin-left: 50%;
+              transform: translateX(-50%);
+              width: 50%
+            }
+          }
+          video {
+            width: 100%;
+            @media (min-width: 900px) {
+              margin-left: 50%;
+              transform: translateX(-50%);
+              width: 50%
+            }
           }
         }
       }
     }
+
+
 
     .next-project-container {
       bottom: 3rem;

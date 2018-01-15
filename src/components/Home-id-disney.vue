@@ -60,15 +60,15 @@ export default {
       height: 100%;
       position: absolute;
       width: 100%;
-      @media (min-width: 900px) {
-        align-items: center;
-        transform: translateY(-12%);
-      }
+      // @media (min-width: 900px) {
+      //   align-items: center;
+      //   transform: translateY(-12%);
+      // }
       .home-id-disney-text-container {
         // border: 1px dashed red;
         color: #fff;
         font-family: $primary-font;
-        max-width: 900px;
+        // max-width: 900px;
         padding: 3rem 3rem;
         h1 {
           color: #fff;

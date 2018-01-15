@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="busemannen">
-    <section class="text-flex" :class="{ hidden: this.$store.state.toggleText }">
-      <div class="text-container">
 
+    <section class="text-flex">
+      <div class="text-container">
         <h1>Busemannen</h1>
         <h4>
           Bokomslag for Cappelen Damm <br />
@@ -21,7 +21,7 @@
     <section class="images-flex">
       <div class="images-container">
         <div>
-          <img src="../../static/img/portfolio/busemannen-illustrasjon-retouch.jpg" alt="">
+          <img src="../../static/img/portfolio/busemannen-illustrasjon-retouch.jpg" alt="" style="width:100%;">
         </div>
         <div>
           <img src="../../static/img/portfolio/busemannen-ylvis_01.jpg" alt="">
@@ -82,15 +82,10 @@ export default {
       top: 0rem;
       width: 100%;
       transition: .5s ease-in-out;
-      z-index: 5;
-      @media (min-width:900px) {
-        align-items: center;
-        transform: translateY(-12.5%);
-      }
+      z-index: 1;
 
       .text-container {
         // border: 1px dashed red;
-        max-width: $max-width;
         padding: 3rem;
 
         h1 {
@@ -135,21 +130,29 @@ export default {
       width: 100%;
       z-index: 6;
       .images-container {
+        // border-top: .1rem solid grey;
         line-height: 0;
-        max-width: $max-width;
+        width: 100%;
 
         div {
           background: #000;
           // border: 2px solid lime;
           padding: 2rem 3rem;
           @media (min-width: 900px) {
-            padding: 2rem 0rem;
+            // padding: 2rem 0rem;
           }
           &:last-child {
             margin-bottom: 9rem;
           }
           img {
+            // box-shadow: 0 .5rem 1.6rem #e6e4e4;
+            // border-bottom: .1rem solid grey;
             width: 100%;
+            @media (min-width: 900px) {
+              margin-left: 50%;
+              transform: translateX(-50%);
+              width: 50%
+            }
           }
         }
       }
@@ -177,7 +180,7 @@ export default {
           background: lightgrey;
           cursor: pointer;
           p {
-            color: grey;
+            color: #242323;
           }
         }
         p {

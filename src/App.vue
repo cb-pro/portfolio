@@ -20,6 +20,15 @@ export default {
     importData: function () {
       this.$store.state.data = dataJSON
     }
+  },
+  watch: {
+    '$store.state.showNav' () {
+      if (this.$store.state.showNav) {
+        document.body.style.overflow = 'hidden'
+      } else {
+        document.body.style.overflow = 'visible'
+      }
+    }
   }
 }
 </script>
@@ -27,7 +36,11 @@ export default {
 <style lang="scss">
   html {font-size: 62.5%;
     @media (min-width: 768px) and (max-width: 899px) {font-size: 80%;}
-    @media (min-width: 900px) {font-size: 90%;}}
+    @media (min-width: 900px) and (max-width: 1199px) {font-size: 90%;}
+    @media (min-width: 1200px) {font-size: 110%;}
+  }
+
+
   h1 {font-size: 3.3rem;}  // TITLE
   h2 {font-size: 2.9rem;}  // ALT TITLE
   h3 {font-size: 2.1rem;}
@@ -41,5 +54,9 @@ export default {
   body {
     margin: 0;
     overflow-x: hidden;
+  }
+
+  .app.hidden {
+    overflow: hidden;
   }
 </style>

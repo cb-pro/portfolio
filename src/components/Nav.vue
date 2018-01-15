@@ -5,9 +5,9 @@
 
     <section class="nav-btn-flex">
       <div class="nav-btn-container">
-        <div class="nav-btn" @click="toggleNavBtn">
-          <img class="nav-btn-menu-icon" src="../../static/gfx/ui/menu-lines.svg" v-if="this.$store.state.showNav === false" alt="">
-          <img class="nav-btn-menu-icon" src="../../static/gfx/ui/menu-close.svg" v-if="this.$store.state.showNav === true" alt="">
+        <div class="nav-btn" @click="showNav = !showNav">
+          <img class="nav-btn-menu-icon" src="../../static/gfx/ui/menu-lines.svg" v-if="showNav === false" alt="">
+          <img class="nav-btn-menu-icon" src="../../static/gfx/ui/menu-close.svg" v-if="showNav === true" alt="">
         </div>
       </div>
     </section>
@@ -23,8 +23,16 @@ export default {
     'NavWindow': NavWindow
   },
   computed: {
-    showNav () {
-      return this.$store.getters.showNav
+    /* showNav () {
+      return this.$store.state.showNav
+    } */
+    showNav: {
+      get () {
+        return this.$store.state.showNav
+      },
+      set (value) {
+        this.$store.commit('setNav', value)
+      }
     }
   },
   data () {
@@ -34,7 +42,9 @@ export default {
   },
   methods: {
     toggleNavBtn () {
-      this.$store.dispatch('toggleNav')
+      this.showNav = !this.showNav
+      // this.$store.commit('toggleNav')
+      // this.$store.dispatch('toggleNav')
     }
   }
 }

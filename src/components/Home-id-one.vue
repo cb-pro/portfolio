@@ -32,7 +32,7 @@ export default {
   @import '../assets/scss/main.scss';
 
   .home-id-one {
-    // height: 100%;
+    font-size: 100%;
 
     .background {
       // background: red;
@@ -51,15 +51,15 @@ export default {
       height: 100%;
       position: absolute;
       width: 100%;
-      @media (min-width: 900px) {
-        align-items: center;
-        transform: translateY(-12%);
-      }
+      // @media (min-width: 900px) {
+      //   align-items: center;
+      //   transform: translateY(-12%);
+      // }
       .home-id-one-text-container {
         // border: 1px dashed red;
         color: #303030;
         font-family: $primary-font;
-        max-width: 900px;
+        // max-width: 900px;
         padding: 3rem 3rem;
       }
     }

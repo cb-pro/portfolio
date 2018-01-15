@@ -12,12 +12,12 @@
         <div class="about-links-content">
 
           <!-- OM MEG -->
-          <div class="about-links-om-meg" v-if="activeLink === 1">
+          <div class="about-links-om-meg" >
             <div v-html="this.$store.state.data[1].about.omMeg" />
           </div>
 
           <!-- SKILLS -->
-          <div class="about-links-skills" v-if="activeLink === 1">
+          <div class="about-links-skills" >
             <div v-html="this.$store.state.data[1].about.utvikling"/>
             <div class="logo-firm-container">
               <img class="logo-firm-img" src="../../static/gfx/logos-firm/github-seeklogo.com.svg" alt="">
@@ -45,61 +45,70 @@
           </div>
 
           <!-- ANBEFALINGER -->
-          <section class="about-links-anbefalinger" v-if="activeLink === 1">
+          <section class="about-links-anbefalinger" >
 
-            <!-- Udemy -->
+            <!-- Udemy Logo -->
             <div>
               <p>Ved siden av å lage nettsider prøver jeg også å oppgradere kunnskapene mine ved blant annet å ta kurs på Udemy.com. Her er en liste over de kursene jeg har tatt og anbefaler hvis man ønsker å lære mer om webutvikling.</p>
               <img src="../../static/img/anbefalinger/udemy/logo-udemy.svg" alt="" style="height:3rem;width:inherit;margin-bottom:2rem;" />
             </div>
-            <div>
-              <img class="udemy" src="../../static/img/anbefalinger/udemy/udemy-js.jpg" alt="">
-              <h5>JavaScript:</h5>
-              <h6>Understanding the Weird Parts</h6>
-            </div>
-            <div>
-              <img class="udemy" src="../../static/img/anbefalinger/udemy/udemy-bootcamp.jpg" alt="">
-              <h5>The Web Developer Bootcamp</h5>
-              <h6>HTML, CSS, JS, Node, restApi and more!</h6>
-            </div>
-            <div>
-              <img class="udemy" src="../../static/img/anbefalinger/udemy/udemy-advanced-bootcamp.jpg" alt="">
-              <h5>The Advanced Web Developer Bootcamp</h5>
-              <h6>Advanced JS, ES2015, React 16, Redux, Jasmine, AJAX & Axios, Node APIs, Authentication & Authorization, D3, SVG, and more!</h6>
-            </div>
-            <div>
-              <img class="udemy" src="../../static/img/anbefalinger/udemy/udemy-ux.jpg" alt="">
-              <h5>UX & Web Design Master Course:</h5>
-              <h6>UX strategies, Project scope, Information Architecture, User research and testing, Wireframing and more!</h6>
-            </div>
+
+            <!-- Udemy -->
+            <section class="udemy">
+
+              <div>
+                <img class="udemy" src="../../static/img/anbefalinger/udemy/udemy-js.jpg" alt="">
+                <h5>JavaScript:</h5>
+                <h6>Understanding the Weird Parts</h6>
+              </div>
+              <div>
+                <img class="udemy" src="../../static/img/anbefalinger/udemy/udemy-bootcamp.jpg" alt="">
+                <h5>The Web Developer Bootcamp</h5>
+                <h6>HTML, CSS, JS, Node, restApi and more!</h6>
+              </div>
+              <div>
+                <img class="udemy" src="../../static/img/anbefalinger/udemy/udemy-advanced-bootcamp.jpg" alt="">
+                <h5>The Advanced Web Developer Bootcamp</h5>
+                <h6>Advanced JS, ES2015, React 16, Redux, Jasmine, AJAX & Axios, Node APIs, Authentication & Authorization, D3, SVG, and more!</h6>
+              </div>
+              <div>
+                <img class="udemy" src="../../static/img/anbefalinger/udemy/udemy-ux.jpg" alt="">
+                <h5>UX & Web Design Master Course:</h5>
+                <h6>UX strategies, Project scope, Information Architecture, User research and testing, Wireframing and more!</h6>
+              </div>
+            </section>
 
             <!-- Books -->
-            <h3 style="margin-top:7rem;">For å lære mer om design, anbefaler jeg disse bøkene:</h3>
-            <div>
-              <img class="udemy" src="../../static/img/anbefalinger/books/book-visuell-identitet.jpg" alt="">
-              <h5>Visuell identitet</h5>
-              <h6>av Bjørn Rybakken</h6>
-            </div>
-            <div>
-              <img class="udemy" src="../../static/img/anbefalinger/books/book-logo-type.jpg" alt="">
-              <h5>Logotype</h5>
-              <h6>av Michael Evamy</h6>
-            </div>
-            <div>
-              <img class="udemy" src="../../static/img/anbefalinger/books/book-typo-fundamental.jpg" alt="">
-              <h5>The Fundamentals of Typography</h5>
-              <h6>av Gavin Ambrose & Paul Harris</h6>
-            </div>
-            <div>
-              <img class="udemy" src="../../static/img/anbefalinger/books/book-grid-systems.jpg" alt="">
-              <h5>Grid systems</h5>
-              <h6>av Josef Müller-Brockmann</h6>
-            </div>
-            <div>
-              <img class="udemy" src="../../static/img/anbefalinger/books/book-fargene-forteller.jpg" alt="">
-              <h5>Fargene forteller</h5>
-              <h6>av Tove Steinbo</h6>
-            </div>
+            <h3>For å lære mer om design, anbefaler jeg disse bøkene:</h3>
+
+            <section class="books-flex">
+              <div>
+                <img class="udemy" src="../../static/img/anbefalinger/books/book-visuell-identitet.jpg" alt="">
+                <h5>Visuell identitet</h5>
+                <h6>av Bjørn Rybakken</h6>
+              </div>
+              <div>
+                <img class="udemy" src="../../static/img/anbefalinger/books/book-logo-type.jpg" alt="">
+                <h5>Logotype</h5>
+                <h6>av Michael Evamy</h6>
+              </div>
+              <div>
+                <img class="udemy" src="../../static/img/anbefalinger/books/book-typo-fundamental.jpg" alt="">
+                <h5>The Fundamentals of Typography</h5>
+                <h6>av Gavin Ambrose & Paul Harris</h6>
+              </div>
+              <div>
+                <img class="udemy" src="../../static/img/anbefalinger/books/book-grid-systems.jpg" alt="">
+                <h5>Grid systems</h5>
+                <h6>av Josef Müller-Brockmann</h6>
+              </div>
+              <div>
+                <img class="udemy" src="../../static/img/anbefalinger/books/book-fargene-forteller.jpg" alt="">
+                <h5>Fargene forteller</h5>
+                <h6>av Tove Steinbo</h6>
+              </div>
+            </section>
+
           </section>
         </div>
 
@@ -112,7 +121,7 @@
 export default {
   data () {
     return {
-      activeLink: 1
+      //
     }
   }
 }
@@ -129,9 +138,12 @@ export default {
       .about-container {
         // border: 1px dashed red;
         font-family: $primary-font;
-        max-width: $max-width;
+        // max-width: 30%;
         padding: 3rem;
         width: 100%;
+        @media (min-width: 900px) {
+          max-width: 50%;
+        }
         h3 {
           margin-top: -1rem;
           margin-bottom: 2.5rem;
@@ -169,6 +181,21 @@ export default {
             margin-bottom: 3rem;
           }
 
+        .about-links-skills {
+          @media (min-width: 768px) and (max-width: 899px)  {
+            p {
+              margin-top: 2rem;
+              text-align: center;
+            }
+          }
+          @media (min-width: 900px) {
+            p {
+              margin-top: 2rem;
+              text-align: center;
+            }
+          }
+        }
+
           // SKILLS STYLES
           .logo-firm-container {
             align-content: space-between;
@@ -176,6 +203,9 @@ export default {
             // border: 1px dashed red;
             display: flex;
             flex-wrap: wrap;
+            @media (min-width: 0px) {
+              justify-content: center;
+            }
             .logo-firm-img {
               height: 4rem;
               margin: 1.5rem 1rem;
@@ -187,23 +217,68 @@ export default {
 
           // ANBEFALINGER STYLES
           .about-links-anbefalinger {
-            div {
-              margin-bottom: 4rem;
-              &:first-child {margin-bottom: 0;}
-              img {
-                width: 100%;
+            .udemy {
+              div {
+                border-bottom: .1rem solid grey;
+                padding-bottom: 1rem;
+                margin-bottom: 4rem;
+                // &:first-child {margin-bottom: 0;}
+                img {
+                  margin-bottom: .5rem;
+                  width: 100%;
+                  @media (min-width: 900px) {
+                    margin-left: 50%;
+                    margin-bottom: .1rem;
+                    transform: translate(-50%);
+                    width: 95%;
+                  }
+                }
+                h5 {
+                  margin: 1rem 0rem .25rem 0rem;
+                }
+                h6 {
+                  font-size: 1.4rem;
+                  font-weight: 400;
+                  margin: 0rem 0rem;
+                }
               }
-              h5 {
-                margin: 1rem 0rem .25rem 0rem;
+            }
+
+            h3 {
+              margin-top: 7rem;
+              @media (min-width: 900px) {
+                margin-bottom: 5rem;
               }
-              h6 {
-                font-size: 1.4rem;
-                font-weight: 400;
-                margin: 0rem 0rem;
+            }
+
+            .books-flex {
+              div {
+                border-bottom: .1rem solid grey;
+                padding-bottom: 1rem;
+                margin-bottom: 4rem;
+                // &:first-child {margin-bottom: 0;}
+                img {
+                  margin-bottom: .5rem;
+                  width: 100%;
+                  @media (min-width: 900px) {
+                    margin-left: 50%;
+                    margin-bottom: 3rem;
+                    transform: translate(-50%);
+                    width: 50%;
+                  }
+                }
+                h5 {
+                  margin: 1rem 0rem .25rem 0rem;
+                }
+                h6 {
+                  font-size: 1.4rem;
+                  font-weight: 400;
+                  margin: 0rem 0rem;
+                }
               }
             }
           }
-          
+
         }
       }
     }

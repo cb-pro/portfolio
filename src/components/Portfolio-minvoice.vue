@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="minvoice">
-    <section class="text-flex" :class="{ hidden: this.$store.state.toggleText }">
+
+    <section class="text-flex">
       <div class="text-container">
         <h1>mInvoice<sup style="font-size:1rem">®</sup></h1>
         <h4>
@@ -14,19 +15,20 @@
         <img class="my-logos" src="../../static/gfx/logos/iux-sm-logo.svg" alt="">
       </div>
     </section>
+
     <section class="images-flex">
       <div class="images-container">
         <div>
           <img src="../../static/img/portfolio/minvoice-head-tall.jpg" alt="">
         </div>
         <div>
-          <img src="../../static/img/portfolio/minvoice_01.jpg" alt="">
+          <img src="../../static/img/portfolio/minvoice_01.jpg" alt="" class="img-shrink" style="border: 1px solid #000;">
         </div>
         <div>
-          <img src="../../static/img/portfolio/minvoice_02.jpg" alt="">
+          <img src="../../static/img/portfolio/minvoice_02.jpg" alt="" class="img-shrink" style="border: 1px solid #000;">
         </div>
         <div>
-          <img src="../../static/img/portfolio/minvoice_03.jpg" alt="">
+          <img src="../../static/img/portfolio/minvoice_03.jpg" alt="" class="img-shrink" style="border: 1px solid #000;">
         </div>
       </div>
     </section>
@@ -76,14 +78,9 @@ export default {
       width: 100%;
       transition: .5s ease-in-out;
       z-index: 0;
-      @media (min-width:900px) {
-        align-items: center;
-        transform: translateY(-12.5%);
-      }
 
       .text-container {
         // border: 1px dashed red;
-        max-width: $max-width;
         padding: 3rem;
 
         h1 {
@@ -130,22 +127,34 @@ export default {
       transform: translateY(100%);
       width: 100%;
       .images-container {
+        // border-top: .1rem solid grey;
         line-height: 0;
-        max-width: $max-width;
+        width: 100%;
 
         div {
           background: #fff;
           // border: 2px solid lime;
           padding: 2rem 3rem;
           @media (min-width: 900px) {
-            padding: 2rem 0rem;
+            // padding: 2rem 0rem;
           }
           &:last-child {
             margin-bottom: 9rem;
           }
           img {
-            box-shadow: 0 .5rem 1.6rem #e6e4e4;
+            // box-shadow: 0 .5rem 1.6rem #e6e4e4;
+            border-bottom: .1rem solid grey;
             width: 100%;
+            @media (min-width: 768px) {
+              margin-left: 50%;
+              transform: translateX(-50%);
+              width: 50%
+            }
+          }
+          @media (min-width: 768px) {
+            .img-shrink {
+              width: 25%;
+            }
           }
         }
       }

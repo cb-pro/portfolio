@@ -7,9 +7,6 @@ export const store = new Vuex.Store({
   state: {
     showNav: false,
     breadcrumbsMain: 'Velkommen'
-    // toggleText: false,
-    // listenToScroll: false,
-    // textDisabled: true
   },
   getters: {
     showNav (state) {
@@ -17,13 +14,13 @@ export const store = new Vuex.Store({
     }
   },
   mutations: {
-    toggleNav (state) {
-      state.showNav = !state.showNav
+    setNav (state, payload) {
+      state.showNav = payload
     }
   },
   actions: {
-    toggleNav (context) {
-      context.commit('toggleNav')
+    toggleNav (store) {
+      store.commit('setNav', !store.state.showNav)
     }
   }
 })

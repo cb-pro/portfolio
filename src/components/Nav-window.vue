@@ -50,7 +50,6 @@ export default {
   methods: {
     toggleNavBtn (e) {
       this.$store.dispatch('toggleNav')
-      this.$store.state.toggleText = false
       setTimeout(() => {
         this.$store.state.breadcrumbsMain = e
       }, 1000)
@@ -77,7 +76,7 @@ export default {
       justify-content: center;
       .nav-container {
         // border: 1px dashed red;
-        max-width: 900px;
+        // max-width: 900px;
         padding: 3rem;
         width: 100%;
       }
