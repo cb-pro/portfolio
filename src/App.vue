@@ -36,8 +36,9 @@ export default {
 <style lang="scss">
   html {font-size: 62.5%;
     @media (min-width: 768px) and (max-width: 899px) {font-size: 80%;}
-    @media (min-width: 900px) and (max-width: 1199px) {font-size: 90%;}
-    @media (min-width: 1200px) {font-size: 110%;}
+    @media (min-width: 900px) and (max-width: 1099px) {font-size: 90%;}
+    @media (min-width: 1100px) and (max-width: 1299px) {font-size: 100%;}
+    @media (min-width: 1300px) {font-size: 110%;}
   }
 
 

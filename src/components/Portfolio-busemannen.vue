@@ -21,7 +21,7 @@
     <section class="images-flex">
       <div class="images-container">
         <div>
-          <img src="../../static/img/portfolio/busemannen-illustrasjon-retouch.jpg" alt="" style="width:100%;">
+          <img src="../../static/img/portfolio/busemannen-illustrasjon-retouch.jpg" alt="" style="width:100%;margin-left: 0%;transform: translateX(0%);">
         </div>
         <div>
           <img src="../../static/img/portfolio/busemannen-ylvis_01.jpg" alt="">

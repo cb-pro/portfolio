@@ -110,6 +110,9 @@ export default {
   .nav-kontakt-flex {
     // border: 1px dashed red;
     .nav-kontakt-container {
+      h2 {
+        margin-bottom: 1.2rem;
+      }
       p {
         margin-bottom: .5rem;
       }

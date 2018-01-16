@@ -25,8 +25,8 @@
         <img src="../../static/img/portfolio/fra_ung_00-head.jpg" alt="">
         </div>
         <div>
-        <video controls poster="../../static/video/fra-ungdommen-thumb.jpg">
-          <source src="../../static/video/fra-ungdommen-video.mp4" type="video/mp4" />
+        <video controls poster="../../static/video-thumb/fra-ungdommen-thumb.jpg">
+          <source src="https://christofferbogsti.com/lrg-files/fu-video.mp4" type="video/mp4" />
         </video>
           <!-- <iframe width="100%" src="https://www.youtube.com/embed/tCrSX4sGp4o?autoplay=0&autohide=2&border=0&wmode=opaque&enablejsapi=1&modestbranding=0&controls=2&showinfo=0&rel=0&amp;" frameborder="0" allowfullscreen></iframe> -->
         </div>

@@ -1,8 +1,9 @@
 <template lang="html">
   <div class="about">
+      <h1>Hei</h1>
     <section class="about-flex">
-      <div class="about-container">
-        <h1>Hei</h1>
+        <div class="about-container">
+
         <h3>Jeg er en designer med lidenskap for koding.</h3>
 
         <!-- LINE -->
@@ -131,13 +132,17 @@ export default {
   @import '../assets/scss/main.scss';
 
   .about {
+    font-family: $primary-font;
+    h1 {
+      padding: 3rem;
+    }
     .about-flex {
       // border: 1px dashed red;
       display: flex;
       justify-content: center;
       .about-container {
         // border: 1px dashed red;
-        font-family: $primary-font;
+
         // max-width: 30%;
         padding: 3rem;
         width: 100%;
