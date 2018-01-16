@@ -134,7 +134,11 @@ export default {
   .about {
     font-family: $primary-font;
     h1 {
-      padding: 3rem;
+      padding: 3rem 0 0 3rem;
+      margin-bottom: 0;
+      @media (min-width: 768px) {
+        margin-bottom: 3rem;
+      }
     }
     .about-flex {
       // border: 1px dashed red;
