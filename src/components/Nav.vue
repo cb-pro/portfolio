@@ -71,6 +71,9 @@ export default {
       position: fixed;
       right: 3rem;
       z-index: 9;
+      @media (min-width: 900px) {
+        right: 6rem;
+      }
       .nav-btn-container {
         .nav-btn {
           align-items: center;

@@ -77,8 +77,11 @@ export default {
       .nav-container {
         // border: 1px dashed red;
         // max-width: 900px;
-        padding: 3rem;
+        padding: 3rem 3rem;
         width: 100%;
+        @media (min-width: 900px) {
+          padding: 3rem 6rem;
+        }
       }
     }
   }

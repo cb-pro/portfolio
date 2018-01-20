@@ -118,8 +118,11 @@ export default {
 
       .text-container {
         // border: 1px dashed red;
-        padding: 3rem;
+        padding: 3rem 3rem;
         width: 100%;
+        @media (min-width: 900px) {
+          padding: 3rem 6rem;
+        }
 
         h1 {
           // border: 1px dashed red;
@@ -167,7 +170,7 @@ export default {
       display: flex;
       justify-content: center;
       position: absolute;
-      transform: translateY(100%);
+      transform: translateY(105%);
       width: 100%;
       .images-container {
         // border-top: .1rem solid grey;
@@ -212,6 +215,9 @@ export default {
       left: 3rem;
       position: fixed;
       z-index: 5;
+      @media (min-width: 900px) {
+        left: 6rem;
+      }
       .next-project-btn {
         background: hsla(0,0%,100%,.2);
         align-items: center;

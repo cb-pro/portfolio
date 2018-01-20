@@ -1,10 +1,10 @@
 <template lang="html">
   <div class="about">
-      <h1>Hei</h1>
+      <h1>Om meg</h1>
     <section class="about-flex">
         <div class="about-container">
 
-        <h3>Jeg er en designer med lidenskap for koding.</h3>
+        <h3>Jeg er en designer med <br/> lidenskap for koding.</h3>
 
         <!-- LINE -->
         <hr />
@@ -20,7 +20,7 @@
           <!-- SKILLS -->
           <div class="about-links-skills" >
             <div v-html="this.$store.state.data[1].about.utvikling"/>
-            <div class="logo-firm-container">
+            <div class="logo-firm-container first">
               <img class="logo-firm-img" src="../../static/gfx/logos-firm/github-seeklogo.com.svg" alt="">
               <img class="logo-firm-img" src="../../static/gfx/logos-firm/bootstrap-seeklogo.com.svg" alt="">
               <img class="logo-firm-img" src="../../static/gfx/logos-firm/node-sass-seeklogo.com.svg" alt="" style="height:4.5rem">
@@ -139,6 +139,9 @@ export default {
       @media (min-width: 768px) {
         margin-bottom: 3rem;
       }
+      @media (min-width: 900px) {
+        padding: 3rem 0 0 6rem;
+      }
     }
     .about-flex {
       // border: 1px dashed red;
@@ -148,10 +151,11 @@ export default {
         // border: 1px dashed red;
 
         // max-width: 30%;
-        padding: 3rem;
+        padding: 3rem 3rem;
         width: 100%;
         @media (min-width: 900px) {
           max-width: 50%;
+          // padding: 3rem 6rem;
         }
         h3 {
           margin-top: -1rem;
@@ -215,6 +219,11 @@ export default {
             @media (min-width: 0px) {
               justify-content: center;
             }
+            &.first {
+            @media (min-width: 900px) {
+              margin-top: 3rem;
+              }
+            }
             .logo-firm-img {
               height: 4rem;
               margin: 1.5rem 1rem;
@@ -237,9 +246,9 @@ export default {
                   width: 100%;
                   @media (min-width: 900px) {
                     margin-left: 50%;
-                    margin-bottom: .1rem;
+                    margin-bottom: 2rem;
                     transform: translate(-50%);
-                    width: 95%;
+                    width: 70%;
                   }
                 }
                 h5 {

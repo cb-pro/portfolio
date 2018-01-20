@@ -62,6 +62,9 @@ export default {
         font-family: $primary-font;
         // max-width: 900px;
         padding: 3rem 3rem;
+        @media (min-width: 900px) {
+          padding: 3rem 6rem;
+        }
         h1 {
           color: yellow;
         }
@@ -83,6 +86,9 @@ export default {
       left: 3rem;
       position: fixed;
       width: 25%;
+      @media (min-width: 900px) {
+        left: 6rem;
+      }
       .timer-bar-fill {
         background: #4FA3C9;
         height: 100%;

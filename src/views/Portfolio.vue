@@ -30,7 +30,7 @@
 
         <div class="projects-flex">
           <div class="projects-container" @click="redirectTo('/portfolio/busemannen')">
-            <img src="../../static/img/portfolio/busemannen-illustrasjon-retouch.jpg" alt="">
+            <img src="../../static/img/portfolio/busemannen-3dbook.jpg" alt="">
             <h5>Busemannen</h5>
             <h6>Bokomslag for Cappelen Damm</h6>
           </div>
@@ -64,7 +64,10 @@ export default {
       justify-content: center;
       .container {
         // max-width: $max-width;
-        padding: 3rem;
+        padding: 3rem 3rem;
+        @media (min-width: 900px) {
+          padding: 3rem 6rem;
+        }
         width: 100%;
 
         h1 {
@@ -77,9 +80,9 @@ export default {
 
           .projects-container {
             // box-shadow: 0 .5rem 1.6rem #e6e4e4;
-            border-bottom: .2rem solid grey;
+            border-bottom: .15rem solid grey;
             @media (min-width: 900px) {
-              width: 60%
+              width: 50%
             }
             cursor: pointer;
             margin-bottom: 4rem;
@@ -106,7 +109,7 @@ export default {
               font-size: 1.4rem;
               font-weight: 400;
               margin: 0rem 0rem;
-              padding: 0 0 2rem 0;
+              padding: 0 0 1rem 0;
             }
           }
         }

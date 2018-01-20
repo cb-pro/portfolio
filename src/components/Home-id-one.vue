@@ -61,6 +61,9 @@ export default {
         font-family: $primary-font;
         // max-width: 900px;
         padding: 3rem 3rem;
+        @media (min-width: 900px) {
+          padding: 3rem 6rem;
+        }
       }
     }
 
@@ -72,6 +75,9 @@ export default {
       left: 3rem;
       position: fixed;
       width: 25%;
+      @media (min-width: 900px) {
+        left: 6rem;
+      }
       .timer-bar-fill {
         background: red;
         height: 100%;

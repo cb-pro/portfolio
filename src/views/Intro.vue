@@ -96,6 +96,9 @@ export default {
         margin: .8rem;
         padding-left: 2rem;
         position: absolute;
+        @media (min-width: 900px) {
+          padding-left: 4rem;
+        }
         h3,h6 {
           margin: 0rem;
         }

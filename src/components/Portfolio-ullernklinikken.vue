@@ -39,7 +39,7 @@
           <img src="../../static/img/portfolio/ullernklinikken-contact-low.jpg" alt="">
         </div>
         <div>
-          <img src="../../static/img/portfolio/ullernklinikken-ipad-low.jpg" alt="">
+          <img src="../../static/img/portfolio/ullernklinikken-ipad.jpg" alt="">
         </div>
       </div>
     </section>
@@ -92,7 +92,10 @@ export default {
 
       .text-container {
         // border: 1px dashed red;
-        padding: 3rem;
+        padding: 3rem 3rem;
+        @media (min-width: 900px) {
+          padding: 3rem 6rem;
+        }
 
         h1 {
           // border: 1px dashed red;
@@ -171,6 +174,9 @@ export default {
       left: 3rem;
       position: fixed;
       z-index: 5;
+      @media (min-width: 900px) {
+        left: 6rem;
+      }
       .next-project-btn {
         background: hsla(0,0%,100%,.2);
         align-items: center;
