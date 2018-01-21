@@ -22,7 +22,7 @@
     <section class="images-flex">
       <div class="images-container">
         <div>
-        <img src="../../static/img/portfolio/fra_ung_00-head.jpg" alt="">
+        <img src="../../static/img/portfolio/fra_ung_00-head.jpg" alt="Skjermvisning av prosjektet på tablet">
         </div>
         <div>
         <video controls poster="../../static/video-thumb/fra-ungdommen-thumb.jpg">
@@ -31,40 +31,40 @@
           <!-- <iframe width="100%" src="https://www.youtube.com/embed/tCrSX4sGp4o?autoplay=0&autohide=2&border=0&wmode=opaque&enablejsapi=1&modestbranding=0&controls=2&showinfo=0&rel=0&amp;" frameborder="0" allowfullscreen></iframe> -->
         </div>
         <div>
-          <img src="../../static/img/portfolio/fra_ung_01.jpg" alt="">
+          <img src="../../static/img/portfolio/fra_ung_01.jpg" alt="Bilde av splashscreen">
         </div>
         <div>
-          <img src="../../static/img/portfolio/fra_ung_02.jpg" alt="">
+          <img src="../../static/img/portfolio/fra_ung_02.jpg" alt="Bilde av hvordan bruke appen">
         </div>
         <div>
-          <img src="../../static/img/portfolio/fra_ung_03.jpg" alt="">
+          <img src="../../static/img/portfolio/fra_ung_03.jpg" alt="Bilde av meny">
         </div>
         <div>
-          <img src="../../static/img/portfolio/fra_ung_04.jpg" alt="">
+          <img src="../../static/img/portfolio/fra_ung_04.jpg" alt="Bilde av meny med kart">
         </div>
         <div>
-          <img src="../../static/img/portfolio/fra_ung_05.jpg" alt="">
+          <img src="../../static/img/portfolio/fra_ung_05.jpg" alt="Bilde av kapittel intro">
         </div>
         <div>
-          <img src="../../static/img/portfolio/fra_ung_06.jpg" alt="">
+          <img src="../../static/img/portfolio/fra_ung_06.jpg" alt="Bilde av første siden i et kapittel">
         </div>
         <div>
-          <img src="../../static/img/portfolio/fra_ung_07.jpg" alt="">
+          <img src="../../static/img/portfolio/fra_ung_07.jpg" alt="Bilde fra et av kapitlene">
         </div>
         <div>
-          <img src="../../static/img/portfolio/fra_ung_08.jpg" alt="">
+          <img src="../../static/img/portfolio/fra_ung_08.jpg" alt="Bilde fra et av kapitlene">
         </div>
         <div>
-          <img src="../../static/img/portfolio/fra_ung_09.jpg" alt="" style="border: .1rem solid grey">
+          <img src="../../static/img/portfolio/fra_ung_09.jpg" alt="Bilde fra et av kapitlene" style="border: .1rem solid grey">
         </div>
         <div>
-          <img src="../../static/img/portfolio/fra_ung_10.jpg" alt="">
+          <img src="../../static/img/portfolio/fra_ung_10.jpg" alt="Bilde fra et av kapitlene">
         </div>
         <div>
-          <img src="../../static/img/portfolio/fra_ung_11.jpg" alt="" style="border: .1rem solid grey">
+          <img src="../../static/img/portfolio/fra_ung_11.jpg" alt="Bilde fra et av kapitlene" style="border: .1rem solid grey">
         </div>
         <div>
-          <img src="../../static/img/portfolio/fra_ung_12.jpg" alt="" style="border: .1rem solid grey">
+          <img src="../../static/img/portfolio/fra_ung_12.jpg" alt="Bilde fra et av kapitlene" style="border: .1rem solid grey">
         </div>
       </div>
     </section>

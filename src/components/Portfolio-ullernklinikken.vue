@@ -21,25 +21,25 @@
     <section class="images-flex">
       <div class="images-container">
         <div>
-          <img src="../../static/img/portfolio/ullernklinikken-head.jpg" alt="">
+          <img src="../../static/img/portfolio/ullernklinikken-head.jpg" alt="Skjermvisning av prosjektet på desktop og mobil">
         </div>
         <div>
-          <img src="../../static/img/portfolio/ullernklinikken-home-Low.jpg" alt="">
+          <img src="../../static/img/portfolio/ullernklinikken-home-Low.jpg" alt="Bilde av startsiden">
         </div>
         <div>
-          <img src="../../static/img/portfolio/ullernklinikken-order-ow.jpg" alt="">
+          <img src="../../static/img/portfolio/ullernklinikken-order-ow.jpg" alt="Bilde av timebestilling etter å ha trykket Bestill time">
         </div>
         <div>
-          <img src="../../static/img/portfolio/ullernklinikken-info-low.jpg" alt="">
+          <img src="../../static/img/portfolio/ullernklinikken-info-low.jpg" alt="Bilde av info siden">
         </div>
         <div>
-          <img src="../../static/img/portfolio/ullernklinikken-employees-low.jpg" alt="">
+          <img src="../../static/img/portfolio/ullernklinikken-employees-low.jpg" alt="Bilde av ansatte siden">
         </div>
         <div>
-          <img src="../../static/img/portfolio/ullernklinikken-contact-low.jpg" alt="">
+          <img src="../../static/img/portfolio/ullernklinikken-contact-low.jpg" alt="Bilde av kotakt siden">
         </div>
         <div>
-          <img src="../../static/img/portfolio/ullernklinikken-ipad.jpg" alt="">
+          <img src="../../static/img/portfolio/ullernklinikken-ipad.jpg" alt="Bilde av startsiden på tablet">
         </div>
       </div>
     </section>

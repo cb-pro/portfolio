@@ -6,7 +6,7 @@
 
         <div class="projects-flex">
           <router-link to="/portfolio/ullernklinikken" class="projects-container" tag="div">
-            <img src="../../static/img/portfolio/ullernklinikken-head.jpg" alt="">
+            <img src="../../static/img/portfolio/ullernklinikken-head.jpg" alt="Skjermvisning av prosjektet på desktop og mobil">
             <h5>Ullernklinikken</h5>
             <h6>Webapplikasjon for Ullernklinikken.no </h6>
           </router-link>
@@ -14,7 +14,7 @@
 
         <div class="projects-flex">
           <div class="projects-container" @click="redirectTo('/portfolio/minvoice')">
-            <img src="../../static/img/portfolio/minvoice-head.jpg" alt="">
+            <img src="../../static/img/portfolio/minvoice-head.jpg" alt="Skjermvisning av prosjektet på mobil">
             <h5>mInvoice<sup style="font-size:1rem">®</sup></h5>
             <h6>App design for minvoice<sup style="font-size:.5rem">®</sup></h6>
           </div>
@@ -22,7 +22,7 @@
 
         <div class="projects-flex">
           <div class="projects-container" @click="redirectTo('/portfolio/fra-ungdommen')">
-            <img src="../../static/img/portfolio/fra_ung_00-head.jpg" alt="">
+            <img src="../../static/img/portfolio/fra_ung_00-head.jpg" alt="Skjermvisning av prosjektet på tablet">
             <h5>Fra Ungdommen</h5>
             <h6>Ebok for Cappelen Damm</h6>
           </div>
@@ -30,7 +30,7 @@
 
         <div class="projects-flex">
           <div class="projects-container" @click="redirectTo('/portfolio/busemannen')">
-            <img src="../../static/img/portfolio/busemannen-3dbook.jpg" alt="">
+            <img src="../../static/img/portfolio/busemannen-3dbook.jpg" alt="Bilde av bokomslaget">
             <h5>Busemannen</h5>
             <h6>Bokomslag for Cappelen Damm</h6>
           </div>

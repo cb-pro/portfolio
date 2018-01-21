@@ -19,16 +19,16 @@
     <section class="images-flex">
       <div class="images-container">
         <div>
-          <img src="../../static/img/portfolio/minvoice-head-tall.jpg" alt="">
+          <img src="../../static/img/portfolio/minvoice-head-tall.jpg" alt="Skjermvisning av prosjektet på mobil">
         </div>
         <div>
-          <img src="../../static/img/portfolio/minvoice_01.jpg" alt="" class="img-shrink" style="border: 1px solid #000;">
+          <img src="../../static/img/portfolio/minvoice_01.jpg" alt="Bilde av dasboard på appen" class="img-shrink" style="border: 1px solid #000;">
         </div>
         <div>
-          <img src="../../static/img/portfolio/minvoice_02.jpg" alt="" class="img-shrink" style="border: 1px solid #000;">
+          <img src="../../static/img/portfolio/minvoice_03.jpg" alt="Bilde av ubetalte på appen" class="img-shrink" style="border: 1px solid #000;">
         </div>
         <div>
-          <img src="../../static/img/portfolio/minvoice_03.jpg" alt="" class="img-shrink" style="border: 1px solid #000;">
+          <img src="../../static/img/portfolio/minvoice_02.jpg" alt="Bilde av historikk på appen" class="img-shrink" style="border: 1px solid #000;">
         </div>
       </div>
     </section>

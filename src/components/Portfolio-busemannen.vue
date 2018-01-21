@@ -21,19 +21,19 @@
     <section class="images-flex">
       <div class="images-container">
         <div>
-          <img src="../../static/img/portfolio/busemannen-illustrasjon-retouch.jpg" alt="" style="width:100%;margin-left: 0%;transform: translateX(0%);">
+          <img src="../../static/img/portfolio/busemannen-illustrasjon-retouch.jpg" alt="Bilde av illustrasjon" style="width:100%;margin-left: 0%;transform: translateX(0%);">
         </div>
         <div>
-          <img src="../../static/img/portfolio/busemannen-ylvis_01.jpg" alt="">
+          <img src="../../static/img/portfolio/busemannen-ylvis_01.jpg" alt="Bilde av boka fra tvprogrammet ylvis">
         </div>
         <div>
-          <img src="../../static/img/portfolio/busemannen-ylvis_02.jpg" alt="">
+          <img src="../../static/img/portfolio/busemannen-ylvis_02.jpg" alt="Bilde av boka fra tvprogrammet ylvis">
         </div>
         <div>
-          <img src="../../static/img/portfolio/busemannen-ylvis_03.jpg" alt="">
+          <img src="../../static/img/portfolio/busemannen-ylvis_03.jpg" alt="Bilde av boka fra tvprogrammet ylvis">
         </div>
         <div>
-          <img src="../../static/img/portfolio/busemannen-skeleton.jpg" alt="">
+          <img src="../../static/img/portfolio/busemannen-skeleton.jpg" alt="Bilde av stock bildet">
         </div>
       </div>
     </section>
