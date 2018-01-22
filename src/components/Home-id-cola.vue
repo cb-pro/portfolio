@@ -8,6 +8,7 @@
         <!-- <h1>{{ this.vuexHomeTitle }}</h1> -->
         <img src="../../static/gfx/ids/id-cola.svg" alt="">
         <div v-html="this.vuexHomeContent" />
+        <hr style="color: #fff;" />
       </div>
     </section>
 

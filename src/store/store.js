@@ -6,7 +6,8 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
   state: {
     showNav: false,
-    breadcrumbsMain: 'Velkommen'
+    breadcrumbsMain: 'Velkommen',
+    scrollActive: true
   },
   getters: {
     showNav (state) {

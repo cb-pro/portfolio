@@ -7,8 +7,11 @@
       <div class="home-id-one-text-container">
         <h1>{{ this.vuexHomeTitle }}</h1>
         <div v-html="this.vuexHomeContent" />
+        <hr />
       </div>
     </section>
+
+
 
     <div class="timer-bar-container">
       <div class="timer-bar-fill"></div>
@@ -59,7 +62,6 @@ export default {
         // border: 1px dashed red;
         color: #303030;
         font-family: $primary-font;
-        // max-width: 900px;
         padding: 3rem 3rem;
         @media (min-width: 900px) {
           padding: 3rem 6rem;

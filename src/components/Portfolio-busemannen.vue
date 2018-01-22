@@ -13,6 +13,7 @@
         </p>
         <hr />
         <img class="my-logos" src="../../static/gfx/logos/cada-logo.svg" alt="">
+        <Scrolldown class="scrolldown" />
       </div>
     </section>
 
@@ -48,7 +49,12 @@
 </template>
 
 <script>
+import Scrolldown from './Animations/Scrolldown.vue'
+
 export default {
+  components: {
+    'Scrolldown': Scrolldown
+  },
   methods: {
     redirectTo () {
       this.$router.go(-1)
@@ -111,6 +117,10 @@ export default {
           height: 4rem;
           margin-top: 1rem;
           transform: translatex(.3rem);
+        }
+        .scrolldown {
+          float: right;
+          padding: .6rem 1rem 0 0;
         }
       }
     }

@@ -39,6 +39,8 @@ export default {
     @media (min-width: 900px) and (max-width: 1099px) {font-size: 90%;}
     @media (min-width: 1100px) and (max-width: 1399px) {font-size: 100%;}
     @media (min-width: 1400px) {font-size: 115%;}
+
+    @media (min-width: 900px) and (max-height: 700px) {font-size: 90%;}
   }
 
 
@@ -52,7 +54,7 @@ export default {
   h6 {font-size: 1.6rem;
     @media (min-width: 900px) {font-size: .9rem!important;}
   }
-  p {font-size: 1.7rem;
+  p {font-size: 1.65rem;
     @media (min-width: 900px) {font-size: 1.3rem;}
   }   // BODY TEXT
 
