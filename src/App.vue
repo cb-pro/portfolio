@@ -52,7 +52,7 @@ export default {
   h6 {font-size: 1.6rem;
     @media (min-width: 900px) {font-size: .9rem!important;}
   }
-  p {font-size: 1.6rem;
+  p {font-size: 1.7rem;
     @media (min-width: 900px) {font-size: 1.3rem;}
   }   // BODY TEXT
 

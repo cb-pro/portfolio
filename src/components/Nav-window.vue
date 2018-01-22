@@ -97,15 +97,18 @@ export default {
     // border: 1px dashed red;
     .nav-links-container {
       h3 {
-        // border: 1px dashed red;
-        color: grey;
+        border-bottom: 1px solid #000;
         display: table;
-        text-decoration: none;
+        transition: .2s ease-in-out;
       }
       a {
+        color: grey;
         text-decoration: none;
-        :hover, :active {color: red;}
-
+        :hover, :active {
+          border-bottom: 8px solid red;
+          color: red;
+          transition: .2s ease-in-out;
+        }
       }
     }
   }

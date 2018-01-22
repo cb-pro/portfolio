@@ -82,10 +82,12 @@ export default {
           display: flex;
           height: 4.5rem;
           justify-content: center;
+          transition: .2s ease-in-out;
           width: 4.5rem;
           &:hover {
             @media (min-width: 900px) {
               background: lightgrey;
+              transition: .2s ease-in-out;
             }
           }
           &:active {
