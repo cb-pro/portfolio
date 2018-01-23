@@ -8,6 +8,7 @@ import Ullernklinikken from '@/components/Portfolio-ullernklinikken.vue'
 import mInvoice from '@/components/Portfolio-minvoice.vue'
 import FraUngdommen from '@/components/Portfolio-fra_ungdommen.vue'
 import Busemannen from '@/components/Portfolio-busemannen.vue'
+import Kollektivbryggeriet from '@/components/Portfolio-kollektivbryggeriet.vue'
 
 // import Test from '@/views/Test.vue'
 
@@ -55,6 +56,11 @@ export default new Router({
       path: '/portfolio/busemannen',
       name: 'Busemannen',
       component: Busemannen
+    },
+    {
+      path: '/portfolio/kollektivbryggeriet',
+      name: 'Kollektivbryggeriet',
+      component: Kollektivbryggeriet
     }
     // {
     //   path: '/test',

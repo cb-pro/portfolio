@@ -14,9 +14,10 @@
         <section class="nav-links-flex">
           <div class="nav-links-container">
             <h2>Navigasjon</h2>
-            <router-link to="/identitet"><h3 @click="toggleNavBtn('Identitet')">Identitet</h3></router-link>
-            <router-link to="/om-meg"><h3 @click="toggleNavBtn('Om meg')">Om meg</h3></router-link>
+            <!-- <router-link to="/identitet"><h3 @click="toggleNavBtn('Identitet')">Identitet</h3></router-link> -->
             <router-link to="/portfolio"><h3 @click="toggleNavBtn('Portfolio')">Portfolio</h3></router-link>
+            <router-link to="/om-meg"><h3 @click="toggleNavBtn('Om meg')">Om meg</h3></router-link>
+            <h3 style="color:lightgrey;border-bottom:none;">Blog (kommer)</h3>
           </div>
         </section>
 
@@ -100,6 +101,7 @@ export default {
         border-bottom: 1px solid #000;
         display: table;
         transition: .2s ease-in-out;
+        color: grey;
       }
       a {
         color: grey;
