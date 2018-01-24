@@ -7,7 +7,7 @@
 
         <section class="projects-container">
 
-          <div class="project-container">
+          <div class="project-container" v-in-viewport.once v-if="showUllern">
             <router-link to="/portfolio/ullernklinikken" class="project-wrapper" tag="div">
               <img src="../../static/img/portfolio/ullernklinikken-head.jpg" alt="Skjermvisning av prosjektet på desktop og mobil">
               <h5>Ullernklinikken</h5>
@@ -15,7 +15,7 @@
             </router-link>
           </div>
 
-          <div class="project-container">
+          <div class="project-container" v-in-viewport.once v-if="showMinvoice">
             <router-link to="/portfolio/minvoice" class="project-wrapper" tag="div">
               <img src="../../static/img/portfolio/minvoice-head.jpg" alt="Skjermvisning av prosjektet på mobil">
               <h5>mInvoice<sup style="font-size:1rem">®</sup></h5>
@@ -23,7 +23,7 @@
             </router-link>
           </div>
 
-          <div class="project-container">
+          <div class="project-container" v-in-viewport.once v-if="showFraUng">
             <router-link to="/portfolio/fra-ungdommen" class="project-wrapper" tag="div">
               <img src="../../static/img/portfolio/fra_ung_00-head.jpg" alt="Skjermvisning av prosjektet på tablet">
               <h5>Fra Ungdommen</h5>
@@ -31,7 +31,7 @@
             </router-link>
           </div>
 
-          <div class="project-container">
+          <div class="project-container" v-in-viewport.once v-if="showBuse">
             <router-link to="/portfolio/busemannen" class="project-wrapper" tag="div">
               <img src="../../static/img/portfolio/busemannen-3dbook.jpg" alt="Bilde av bokomslaget">
               <h5>Busemannen</h5>
@@ -39,7 +39,7 @@
             </router-link>
           </div>
 
-          <div class="project-container">
+          <div class="project-container" v-in-viewport.once v-if="showKollektiv">
             <router-link to="/portfolio/kollektivbryggeriet" class="project-wrapper" tag="div">
               <img src="../../static/img/portfolio/kb-head.jpg" alt="Bilde av label med logo">
               <h5>Kollektivbryggeriet</h5>
@@ -58,10 +58,47 @@
 
 <script>
 export default {
-  methods: {
-    redirectTo (url) {
-      this.$router.push(url)
+  data () {
+    return {
+      showUllern: false,
+      showMinvoice: false,
+      showFraUng: false,
+      showBuse: false,
+      showKollektiv: false
     }
+  },
+  mounted () {
+    // setTimeout(() => {
+    //   this.showUllern = !this.showUllern
+    //   this.showMinvoice = !this.showMinvoice
+    //   this.callRest()
+    //   // this.showFraUng = !this.showFraUng
+    //   // this.showBuse = !this.showBuse
+    //   // this.showKollektiv = !this.showKollektiv
+    // }, 2000)
+    setTimeout(() => {
+      this.showUllern = !this.showUllern
+    }, 800)
+    setTimeout(() => {
+      this.showMinvoice = !this.showMinvoice
+    }, 1200)
+    setTimeout(() => {
+      this.showFraUng = !this.showFraUng
+    }, 1600)
+    setTimeout(() => {
+      this.showBuse = !this.showBuse
+    }, 1600)
+    setTimeout(() => {
+      this.showKollektiv = !this.showKollektiv
+    }, 1600)
+  },
+  methods: {
+    // callRest () {
+    //   // this.showMinvoice = !this.showMinvoice
+    //   this.showFraUng = !this.showFraUng
+    //   this.showBuse = !this.showBuse
+    //   this.showKollektiv = !this.showKollektiv
+    // }
   }
 }
 </script>
@@ -100,6 +137,9 @@ export default {
             // border: 1px dashed red;
             display: flex;
             justify-content: center;
+            opacity: 0;
+            transform: translateY(3rem);
+            transition: .5s ease-in-out;
 
             .project-wrapper {
               // box-shadow: 0 .5rem 1.6rem #e6e4e4;
@@ -140,5 +180,12 @@ export default {
 
       }
     }
+  }
+
+  .in-viewport {
+    opacity: 1!important;
+    transition: .5s ease-in;
+    // transition-delay: .5s;
+    transform: translateY(0rem)!important;
   }
 </style>

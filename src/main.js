@@ -4,8 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import { store } from './store/store'
-// import chromata from '../static/js/chromata.min.js'
-// let chromata = require('../static/js/chromata.js')
+import inViewportDirective from 'vue-in-viewport-directive'
+Vue.directive('in-viewport', inViewportDirective)
+Vue.directive('fully-in-viewport', inViewportDirective)
 
 Vue.config.productionTip = false
 

@@ -39,8 +39,9 @@ export default {
     @media (min-width: 900px) and (max-width: 1099px) {font-size: 90%;}
     @media (min-width: 1100px) and (max-width: 1399px) {font-size: 100%;}
     @media (min-width: 1400px) {font-size: 115%;}
+    @media (min-width: 1921px) {font-size: 150%;}
 
-    @media (min-width: 900px) and (max-height: 700px) {font-size: 90%;}
+    @media (min-width: 900px) and (max-height: 700px) {font-size: 80%;}
   }
 
 
